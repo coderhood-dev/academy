@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-04-11T19:10:34.140Z" agent="5.0 (Macintosh; Intel Mac OS X 11_1_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36" etag="sHutIApG3AV58_LiFY94" version="14.5.10" type="github">
+<mxfile host="app.diagrams.net" modified="2021-04-11T22:52:59.448Z" agent="5.0 (Macintosh; Intel Mac OS X 11_1_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36" etag="v7zRMHfuVUnhrn0yfYSj" version="14.5.10" type="github">
   <diagram id="7E8aFTh_Ut4RKtqhWOqv" name="Page-1">
     <mxGraphModel dx="1538" dy="841" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -120,6 +120,9 @@
         </mxCell>
         <mxCell id="SbtuQIadwy2TGa4tqadt-30" value="User Experience&lt;br&gt;con Lucas ✅" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
           <mxGeometry x="153" y="310" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="SbtuQIadwy2TGa4tqadt-31" value="Learning in public&lt;br&gt;con Annie ✅" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="323" y="400" width="110" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
