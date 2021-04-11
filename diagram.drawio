@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-04-11T19:09:11.421Z" agent="5.0 (Macintosh; Intel Mac OS X 11_1_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36" etag="tBd8wUy0xSk-sZvKZADA" version="14.5.10" type="github">
+<mxfile host="app.diagrams.net" modified="2021-04-11T19:10:34.140Z" agent="5.0 (Macintosh; Intel Mac OS X 11_1_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36" etag="sHutIApG3AV58_LiFY94" version="14.5.10" type="github">
   <diagram id="7E8aFTh_Ut4RKtqhWOqv" name="Page-1">
     <mxGraphModel dx="1538" dy="841" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -67,8 +67,8 @@
         <mxCell id="SbtuQIadwy2TGa4tqadt-12" value="&lt;h1&gt;&lt;span&gt;Modulos&lt;/span&gt;&lt;/h1&gt;&lt;h1&gt;&lt;br&gt;&lt;/h1&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="183" y="102.5" width="115" height="35" as="geometry" />
         </mxCell>
-        <mxCell id="SbtuQIadwy2TGa4tqadt-13" value="&lt;h1&gt;Eventos / Workshop&lt;/h1&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="263" y="490" width="240" height="40" as="geometry" />
+        <mxCell id="SbtuQIadwy2TGa4tqadt-13" value="&lt;h1&gt;Eventos / Workshops&lt;/h1&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="263" y="490" width="257" height="40" as="geometry" />
         </mxCell>
         <mxCell id="SbtuQIadwy2TGa4tqadt-14" value="Creative Coding&lt;br&gt;con Fede ✅" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="258" y="557.5" width="90" height="15" as="geometry" />
