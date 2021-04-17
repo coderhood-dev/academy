@@ -1,7 +1,7 @@
 # Academy
 Academy cursos y módulos 
 
-### [Fundamentos de programación](fundamentosDeProgramacin.md)
+### [Fundamentos de programación](fundamentosDeProgramacion.md)
 ### [Programación web](programaciónWeb.md)
 ### [Git](git.md)
 ### [React](react.md)
