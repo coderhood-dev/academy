@@ -1,7 +1,7 @@
 # Fundamentos de programación con Javascript
 ## Historia
 
-La historia del lenguaje JavaScript empieza durante la década de los años 90, se vivió un verdadero _boom_ tecnológico, el Internet cobró un protagonismo mayor a nivel mundial y la humanidad inició formalmente su relación con las computadoras. Comenzaron a desarrollarse las primeras aplicaciones web y las páginas web empezaron a incorporar elementos adicionales a su arquitectura, como por ejemplo, formularios complejos.
+La historia del lenguaje JavaScript empieza durante la década de los años 90, se vivió un verdadero _boom_ tecnológico, el Internet cobró un protagonismo mayor a nivel mundial y la humanidad inició formalmente su relación con las computadoras. Comenzaron a desarrollarse las primeras aplicaciones web y las páginas web empezaron a incorporar elementos adicionales a su arquitectura, como por ejemplo, formularios complejos
 
 - conceptos de lenguajes de programacion
 - propiedades de javascript como lenguaje de programacion
