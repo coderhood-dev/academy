@@ -1,0 +1,15 @@
+{
+  "name": "clase1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "date-fns": "^2.21.1",
+    "random": "^3.0.5"
+  }
+}
