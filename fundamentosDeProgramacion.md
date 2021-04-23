@@ -1,8 +1,24 @@
-## Fundamentos de programación con Javascript
-- historia
-- conceptos de lenguajes de programacion
-- propiedades de javascript como lenguaje de programacion
-  
+# Fundamentos de programación con Javascript
+## Historia
+
+A principios de los años 90, la mayoría de usuarios que se conectaban a Internet lo hacían con módems a una velocidad máxima de 28.8 kbps. En esa época, empezaban a desarrollarse las primeras aplicaciones web y por tanto, las páginas web comenzaban a incluir formularios complejos.
+
+Con unas aplicaciones web cada vez más complejas y una velocidad de navegación tan lenta, surgió la necesidad de un lenguaje de programación que se ejecutara en el navegador del usuario. De esta forma, si el usuario no rellenaba correctamente un formulario, no se le hacía esperar mucho tiempo hasta que el servidor volviera a mostrar el formulario indicando los errores existentes.
+
+**Brendan Eich**, un programador que trabajaba en Netscape, pensó que podría solucionar este problema adaptando otras tecnologías existentes (como _ScriptEase_) al navegador Netscape Navigator 2.0, que iba a lanzarse en 1995. Inicialmente, Eich denominó a su lenguaje _LiveScript_.
+
+Posteriormente, Netscape firmó una alianza con Sun Microsystems para el desarrollo del nuevo lenguaje de programación. Además, justo antes del lanzamiento Netscape decidió cambiar el nombre por el de JavaScript. La razón del cambio de nombre fue exclusivamente por marketing, ya que Java era la palabra de moda en el mundo informático y de Internet de la época.
+
+La primera versión de JavaScript fue un completo éxito y Netscape Navigator 3.0 ya incorporaba la siguiente versión del lenguaje, la versión 1.1. Al mismo tiempo, Microsoft lanzó JScript con su navegador Internet Explorer 3. JScript era una copia de JavaScript al que le cambiaron el nombre para evitar problemas legales.
+
+Para evitar una guerra de tecnologías, Netscape decidió que lo mejor sería estandarizar el lenguaje JavaScript. De esta forma, en 1997 se envió la especificación JavaScript 1.1 al organismo ECMA _European Computer Manufacturers Association_).
+
+ECMA creó el comité TC39 con el objetivo de _"estandarizar de un lenguaje de script multiplataforma e independiente de cualquier empresa"_. El primer estándar que creó el comité TC39 se denominó **ECMA-262**, en el que se definió por primera vez el lenguaje ECMAScript.
+
+Por este motivo, algunos programadores prefieren la denominación _ECMAScript_ para referirse al lenguaje JavaScript. De hecho, JavaScript no es más que la implementación que realizó la empresa Netscape del estándar ECMAScript.
+
+La organización internacional para la estandarización (ISO) adoptó el estándar ECMA-262 a través de su comisión IEC, dando lugar al estándar ISO/IEC-16262.
+
 ---
 ## Que es un algoritmo?
 Es una sucesion de pasos para llegar a un objetivo.
@@ -48,30 +64,28 @@ El algoritmo anterior, entonces corresponderia al siguiente pseudo codigo:
 ```javascript
 vidaRestante = 0;
 
-si (vidaRestante > 1) {
-  // el jugador esta con vida, continuar el juego
+si (vidaRestante == 0) {
+	// el jugador no tiene vida restante, game over
+  	informar('Juego terminado')
 } sino {
-  // el jugador no tiene vida restante, game over
-  informar('Juego terminado')
+  	// el jugador esta con vida, continuar el juego
+  
 }
 ```
+(Notese que usamos '=' para asignar valores y '==' para comparar)
 
 ---
 ### Pero que tal si queremos agregar mas condiciones?
 ```javascript
 vidaRestante = 0;
-quieroSeguirJugando = true;
+quieroSeguirJugando = true; // verdadero en ingles
 
-si ((vidaRestante > 1) Y (quieroSeguirJugando == true)) {
-  // el jugador esta con vida y quiere seguir jugando
-  // continuar el juego
-} sino {
-  // el jugador no tiene vida restante o no quiere
-  // seguir jugando, game over
-  informar('Juego terminado')
+si ((vidaRestante == 0) Y (quieroSeguirJugando == true)) {
+  // el jugador no tiene vida y quiere seguir jugando
+  // reiniciar el juego
 }
 ```
-Aca utlizamos el operador 'y' para unir dos condiciones, veamos estos operadores mas en detalle
+Aca utlizamos el operador 'Y' para componer dos condiciones, veamos los operadores logicos mas en detalle
 
 ---
 ### Operadores logicos
@@ -90,7 +104,7 @@ si (condicionA Y condicionB) {
 
 ---
 **Operador OR**
-El operador AND requiere que ambas condiciones sean verdaderas, pero el operador 'o' (OR) solo requiere que una de las condiciones sea verdadera para que la composicion de ambas sea verdadera
+El operador AND requiere que ambas condiciones sean verdaderas, pero el operador 'O' (OR) solo requiere que una de las condiciones sea verdadera para que la composicion de ambas sea verdadera
 ```javascript
 condicionA = true;
 condicionB = false;
@@ -130,18 +144,20 @@ Pero y los datos? Como utilizamos variables en JavaScript?
 ---
 ## Variables
 Una variable esta compuesta por un espacio en memoria y un identificador el cual se usa para acceder a ese espacio en memoria
-`javascript`
+`codigo en JavaScript`
 ```javascript
 var huevos = 3;
 ```
-'**var**' es la palabra clave del lenguaje para declarar una variable en la memoria, '**huevos**' es el identificador, y **3** el dato. 
-Que clases de datos existen?
+- '**var**' es la palabra clave del lenguaje para declarar una variable en la memoria
+- '**huevos**' es el identificador -
+- **3** corresponde al dato.  (La informacion que nos interesa)
+
+Que tipos de datos existen?
 
 ---
 ## Tipado
 Un tipo es un atributo que define ciertas restricciones a los datos,
 es decir la clase de dato que va a contener la variable.
-Algunos de tipos  en `JavaScript` son:
 
 | Tipo      		| JavaScript	| Ejemplos 		|
 | ---  				| --- 			| --- 			|
@@ -170,7 +186,7 @@ var r2 = a * b; // 18
 var r3 = b - a; // 3
 var r4 = b / a; // 2
 ```
-Cuantas variables se instaciaron en este programa?
+Cuantas variables se declararon en este programa?
 
 ---
 
