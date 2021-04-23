@@ -123,8 +123,8 @@ Traduzcamos las instrucciones que conocemos hasta ahora
 | Español       	| JavaScript			|
 | ---  				| --- 					|
 | Es igual		 	| `==`					|
-| Y 				| &						|
-| O 				| &#124 				|
+| Y 				| `&&`						|
+| O 				| <code>&#124;&#124;</code>		|
 | si 				| `if` 				    |
 | sino 				| `else`				|
 | informar('Hola') 	| `console.log('Hola');`  |
