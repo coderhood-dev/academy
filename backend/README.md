@@ -1,4 +1,4 @@
-# Curso de Backend
+# Curso de backend
 
 ## ¿Qué es un Backend y por qué lo necesitamos?
 
@@ -23,4 +23,3 @@ En este curso vamos a aprender a hacer un backend con `Node`, `Express` y `Mongo
 
 
 - NodeJS, el motor de javascript que nos va a permitir ejecutar nuestras aplicaciones. Lo pueden descargar en [su página oficial](https://nodejs.org/es/)
-
