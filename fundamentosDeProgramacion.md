@@ -1,3 +1,7 @@
+---
+marp: true
+---
+
 # Fundamentos de programación con Javascript
 ## Historia
 
@@ -23,9 +27,10 @@ La organización internacional para la estandarización (ISO) adoptó el estánd
 ## Que es un algoritmo?
 Es una sucesion de pasos para llegar a un objetivo.
 Dentro de los algoritmos podemos encontrar condiciones, procesar informacion y ejecutar acciones
+
 ---
 ### Algoritmo para encender una lampara
-![[lamp-algoritm.png|300]]
+<img src="/assets/lamp-algoritm.png" alt="drawing" width="400"/>
 
 ---
 ## Que es un programa?
@@ -53,11 +58,11 @@ Veamos un ejemplo en la cocina.
 
 ---
 #### Algoritmo para hacer galletitas
-![[cookies-algoritm.png]]
+<img src="/assets/cookies-algoritm.png" alt="drawing" width="400"/>
 
 ---
 ## Logica y control de decisiones
-*- 'En cualquier lenguaje de programación, el código necesita realizar decisiones y llevar a cabo diferentes acciones acordes dependiendo de distintas entradas. Por ejemplo, en un juego, si el el numero de vidas del jugador es 0, entonces se termina el juego.'*
+*- 'En cualquier lenguaje de programación, el código necesita realizar decisiones y llevar a cabo diferentes acciones acordes dependiendo de distintas entradas. Por ejemplo, en un juego, si la vida del jugador es 0, entonces se termina el juego.'*
 
 ---
 El algoritmo anterior, entonces corresponderia al siguiente pseudo codigo:
@@ -143,16 +148,35 @@ Pero y los datos? Como utilizamos variables en JavaScript?
 
 ---
 ## Variables
-Una variable esta compuesta por un espacio en memoria y un identificador el cual se usa para acceder a ese espacio en memoria
+Una variable esta compuesta por un espacio en memoria, un dato y un identificador el cual se usa para acceder a ese espacio en memoria y recuperar el dato
 `codigo en JavaScript`
 ```javascript
 var huevos = 3;
+var harina;
+var miNombre = "Jose";
+var foo;
 ```
 - '**var**' es la palabra clave del lenguaje para declarar una variable en la memoria
 - '**huevos**' es el identificador -
 - **3** corresponde al dato.  (La informacion que nos interesa)
 
-Que tipos de datos existen?
+Como se ve esto en la memoria?
+
+---
+
+## Esquema de variables en memoria
+
+<img src="/assets/memory-scheme.png" alt="drawing" width="550"/>
+
+Imprimamos en pantalla las variables que declaramos
+```javascript
+console.log(huevos); // 3
+console.log(harina); // undefined (Sin definir)
+console.log(miNombre); // "Jose"
+console.log(foo); // undefined (Sin definir)
+```
+
+Que tipos de datos existen? Es lo mismo un **numero** que un **texto**?
 
 ---
 ## Tipado
@@ -190,25 +214,29 @@ Cuantas variables se declararon en este programa?
 
 ---
 
-## Concatenacion de textos
-`javascript`
+## Operaciones con textos: Concatenacion
+
 ```javascript
 var nombre = "Martin";
 var apellido = "Gomez";
-var nombreCompleto = nombre + " " + apellido // Martin Gomez
+var nombreCompleto = nombre + " " + apellido;
+console.log(nombreCompleto); // Martin Gomez
 ```
-
 ---
-## Tipado dinamico y tipado estatico
+## JavaScript es un lenguaje de tipado dinamico
 
-En el lenguaje de tipado estatico las variables **no** pueden cambiar de tipo de dato.
+Esto que significa?
+Una caracteristica para clasificar un lenguaje es por su tipado (Tipado dinamico y tipado estatico)
 
-Ejemplo en `Java` (Tipado estatico)
+En el lenguaje de **tipado estatico** las variables **no** pueden cambiar de tipo de dato.
+
+Ejemplo en `Java` (Lenguaje de tipado estatico)
 ```java
 	String miNombre = "Juan";
 	miNombre = 14; //Error de compilacion
 ```
 ---
+En cambio un lenguaje de **tipado dinamico** las variables si pueden cambiar de tipo de dato durante la ejecucion.
 
 Ejemplo en `JavaScript` (Tipado dinamico)
 ```javascript
@@ -216,10 +244,10 @@ Ejemplo en `JavaScript` (Tipado dinamico)
 	miNombre = 14;
 ```
 En el ultimo ejemplo el programa no presenta errores ya que javascript permite el dinamismo de tipos
-Es esto importante?
+Es esto importante? Veamos el ultimo tema de la seccion
 
 ---
-### Curiosidades del tipado y JavaScript
+### Curiosidades del tipado en JavaScript
 Supongamos que instanciamos las siguientes variables
 ```javascript
 var huevos = "3";
@@ -253,5 +281,69 @@ var huevos = "3";
 var harina = 3;
 var comparacionPorValor = ( huevos === harina ) // falso
 ```
+---
+### Ejercitacion
+Veamos un ejemplo:
+En un video juego, el personaje tomara automaticamente una pocion de vida que le regenera (si es que dispone de una) 1 punto de vida cuando su vida llegue a cero. Informar en pantalla en caso que el jugador pierda.
+```javascript
+vida = 4;
+pocionesDeVida = 2;
+
+si ( vida == 0 ) {
+	si ( pocionesDeVida > 0) {
+		vida = vida + 1;
+		pocionesDeVida = pocionesDeVida - 1;
+	} sino {
+		informar('Perdiste!');
+	}
+}
+```
+Pasar el pseudo codigo a JavaScript
+
+---
+## Ejercicios
+#### 1) Las galletitas de Ema
+Emanuel quiere cocinar galletitas y quiere un programa que lo ayude a saber que debe comprar y en caso que cuente con todos los ingredientes, informar que puede cocinar las galletas. La receta pide los siguientes ingredientes
+
+- 3 huevos
+- 1 barra de chocolate
+- 0.5 kilos de harina
+- 5 cucharadas de azucar
+
+Los ingredientes que tiene Ema tienen que ser variables al inicio del programa que sean faciles de editar
+
+###2) La tienda de ropa
+Una tienda de ropa desea tener un programa que le permita calcular los aumentos a sus prendas, para eso se tienen los datos
+- `precioDePrenda` (que ronda entre los 1500 y 3000 pesos)
+- `porcentajeDeAumento` (que ronda entre el 25-100% )
+- `precioFinal` (precioDePrenda con el aumento agregado)
+
+Ademas, implementar las siguiente funcionalidades:
+- El programa debe informar en pantalla el precio final
+- El programa debe informar en pantalla 'Precio excedido' cuando el precio final supere los $4000
+
+###3) Dia de paga
+En una pizzeria requieren un programa que calcule cuanto cobraran neto los repartides al final del dia (Todos cobran igual)
+
+Se tienen los siguientes datos obligatorios
+- `repartidores` (Cantidad de repartidores, puede ser cualquier numero entero)
+- `esFeriado` (`true` si es Feriado, `false` si no)
+- `gananciaDelDia` (Cuanto recaudo la pizzeria para distribuir a los empleados)
+- `porcentajeParaSueldos` (Un porcentaje de `gananciaDelDia`)
+- `sueldoNetoDeRepartidor` (Cuanto gana en bolsillo el repartidor)
+- `gananciaDelComercioFinal` (Cuanto gana el comercio una vez pagados los sueldos y demas)
+
+Se sabe que:
+- En feriados: `porcentajeParaSueldos` es del 80% de `gananciaDelDia` mientras que en dias normales, es del 65%
+- El comercio utiliza el 20% de su parte restante luego de pagar los sueldos para pagar el combustible
+
+---
+### Fuentes
+https://es.wikipedia.org/wiki/Algoritmo
+https://es.wikipedia.org/wiki/Programa_inform%C3%A1tico
+https://es.wikipedia.org/wiki/Lenguaje_de_programaci%C3%B3n
+https://es.wikipedia.org/wiki/L%C3%B3gica_computacional
+https://developer.mozilla.org/es/docs/Learn/JavaScript/First_steps/Variables
+https://developer.mozilla.org/es/docs/Web/JavaScript/Data_structures
 
 ---
