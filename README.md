@@ -20,4 +20,9 @@ Somos una comunidad de gente en tech que aprende y comparte conocimiento. Por es
 Coderhood somos todes les que participamos, y el equipo que lleva adelante los espacios. Este equipo lo vas a encontrar en Discord con el rol @team. Les integrantes del equipo son personas que comparten el sentir de compartir conocimiento y poden de su parte, con lo que saben y aprenden, para ayudar a difundirlo. No somos profesores que estudiamos como enseñar programación, y ninguno esta ganando dinero haciendo esto, somos un grupo de personas dando lo mejor para ayudarnos, por eso nunca te olvides de ser agradecido con ellos. Si aprendiste algo y querés compartirlo, o sabes hacer alguna de las [tareas en las que necesitamos ayuda](https://coderhood.dev/join-team) hablale a cualquiera del @team que con gusto te vamos a sumar!
 
 
+## Módulos
 ### [Fundamentos de programación](./modulos/1-fundamentos-de-programación/1-datos.md)
+### [Programación web](./modulos/2-diseño-web/html.md)
+### [Git](./modulos/3-git/1-git-init.md)
+### [React](./modulos/4-ecosistema-react/react.md)
+### [Backend](./modulos/5-backend/Clase1.md)
