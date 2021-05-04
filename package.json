@@ -1,0 +1,15 @@
+{
+  "name": "academy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:coderhood-dev/Academy.git",
+  "author": "Ema Lorenzo <aemalorenzo@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "mdx-deck modulos/1-fundamentos-de-programación/1-datos.mdx"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "mdx-deck": "^4.1.1"
+  }
+}
