@@ -6,7 +6,8 @@
   "author": "Ema Lorenzo <aemalorenzo@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "mdx-deck modulos/1-fundamentos-de-programación/1-datos.mdx"
+    "clase-0": "mdx-deck modulos/0-introducción/1-como-funciona-el-internet.mdx",
+    "clase-1": "mdx-deck modulos/1-fundamentos-de-programación/1-datos-y-algoritmos.mdx"
   },
   "dependencies": {},
   "devDependencies": {

@@ -1,0 +1,173 @@
+import { themes } from 'mdx-deck'
+export const theme = themes.book
+
+import hackermanImg from '../../assets/hacking-time.gif'
+import internetImg from '../../assets/internet-abduction.gif'
+import ipImg from '../../assets/ip.gif'
+import serverImg from '../../assets/data-center.jpeg'
+import httpImg from '../../assets/http.png'
+
+# Hola!
+### Aprender programación puede ser abrumador, por eso es mejor hacerlo juntos.
+
+---
+
+## Que es Coderhood?
+Somos una comunidad de gente en tech que aprende y comparte conocimiento. Por eso impulsamos varios espacios y en ellos compartimos lo que sabemos. No sabemos todo, el mundo tech es enorme y lleva una vida de aprendizaje, pero mientras vamos aprendiendo creemos que compartido el viaje es mejor. Por eso incentivamos siempre a que una vez se aprenda algo, le que quiera pueda compartirlo y asi crecer juntos. Coderhood es y siempre va a ser gratis, tanto la comunidad, como las clases y cualquiera de sus espacios.
+
+---
+
+## Nuestros espacios
+
+[Discord](https://discord.gg/JJpBQYJ): Nuestra casa donde vive la comunidad. Discord es un chat con canales de texto, y voz, con posibilidad de hacer llamadas y compartir pantalla. Usamos diferentes canales para cada tema en particular, #academy es el que vamos usar para lo relacionado a Coderhood Academy, justo a los canales específicos de cada módulo. También hay canales de consultas generales, experiencia laboral, busquedas de trabajo, espacios para hablar en ingles, canales de tópicos por tecnologías, etc.
+
+<Steps>
+
+[Twitch](https://www.twitch.tv/coderhood): Nuestro espacio para los streamings. Todas las clases de Coderhood Academy las vamos a dar en vivo por acá, asi que asegurate de seguirnos.
+
+[Youtube](https://www.youtube.com/c/coderhood): Nuestro canal donde vamos a subir todos los streamings previos.
+
+[Twitter](https://twitter.com/coderhood_dev): Acá vamos a publicar novedades, y compartir información relacionada al mundo tech.
+
+[GitHub](https://github.com/coderhood-dev): Donde vamos a almacenar los repositorios de código que escribamos. [Acá también vas a encontrar las clases](https://github.com/coderhood-dev/Academy), sentite libre de sugerir cambios al contenido a travez de Pul Requests (más información de eso en módulo de Git).
+
+</Steps>
+
+---
+
+## El equipo
+Coderhood somos todes les que participamos, y el equipo que lleva adelante los espacios. Este equipo lo vas a encontrar en Discord con el rol @team. Les integrantes del equipo son personas que comparten el sentir de compartir conocimiento y poden de su parte, con lo que saben y aprenden, para ayudar a difundirlo. No somos profesores que estudiamos como enseñar programación, y ninguno esta ganando dinero haciendo esto, somos un grupo de personas dando lo mejor para ayudarnos, por eso nunca te olvides de ser agradecido con ellos. Si aprendiste algo y querés compartirlo, o sabes hacer alguna de las [tareas en las que necesitamos ayuda](https://coderhood.dev/join-team) y te gustaría colaborar hablale a cualquiera del @team que con gusto te vamos a sumar!
+
+---
+
+## Entonces, por donde empezamos?
+A lo largo de aproximadamente 6 meses, vamos a aprender Desarrollo Web FullStack. Ese sería el nombre oficial, y lo van a encontrar en muchas busquedas laborales como Desarrollador FullStack, Programador FullStack, y los conocimientos les permiten también trabajar como Programadores Frontend y Backend.
+
+<img src={hackermanImg} />
+
+---
+
+### Que significan estos roles?
+Para entenderlo necesitamos entender primero que es, y como funciona la programación y el internet.
+
+---
+
+# Como funciona el internet
+>Aclaración: Este contenido no es necesario entenderlo completamente para empezar a programar, pero nos va a orientar de que es lo que vamos a estar estudiando.
+
+<img src={internetImg} />
+
+---
+
+### Un protocolo, es un acuerdo en la forma de comunicarse entre dos partes.
+
+<Steps>
+
+Podriamos decir entonces, que las personas usamos el protocolo del lenguaje para comunicarnos.
+
+Podemos entendernos porque definimos ciertas reglas que las dos partes entienden.
+
+## Las computadoras también tienen su protocolo para comunicarse
+
+### El protocolo TCP/IP
+
+</Steps>
+
+---
+
+Entonces, nosotros pagamos el internet. Ya sea Fibertel, Movistar o Vodafone.
+
+<Steps>
+
+Esto conecta nuestro dispositivo, computadora, celular o playstation a la red.
+
+Usando el protocolo TCP/IP es como vamos a mandar información desde nuestro dispositivo, y como nos va a llegar también. Viajando por cables electricos, opticos o satelites, dependiendo el servicio que contrates.
+
+## Tranqui que esto no lo manejamos nosotros, esto es justamente lo que hace nuestro router.
+
+TCP es como enviamos y recibimos la información.
+
+Y la IP es como identificamos nuestro dispositivo en ese mar de informacion viajando.
+
+
+</Steps>
+
+---
+
+Nuestras IP son un numero similar a
+# 192.168.0.[algo]
+
+Supongamos que la IP de mi computadora es 192.168.0.10
+
+--- 
+
+Eso significa que pueden conectar sus dispositivos a mi computadora ahora?
+
+<Steps>
+
+Masomenos..
+
+</Steps>
+
+---
+
+Para que otros puedan conectarse a una computadora, esta tiene que ser un 
+# Servidor
+
+<img src={serverImg} />
+
+---
+
+La realidad es que no todos los servidores se ven así.
+
+Cualquier computadora que permita conexiones y devuelva información es un servidor.
+
+### Como vamos a permitir conexiónes y como vamos a devolver información?
+
+Se acuerdan de los protocolos? La gran mayoria de internet funciona con 
+
+# el protocolo HTTP
+
+---
+
+# HTTP
+Nos permite conectarnos con un servidor, y que este nos devuelva uno o varios archivos.
+
+Vieron cuando escribimos http://... ? le estamos diciendo a nuestro navegador que queremos conectarnos a un servidor usando este protocolo. 
+
+### Y porque https?
+
+HTTPS es la evolución de HTTP, y encripta la información para que esta viaje segura.
+
+<img src={httpImg} />
+
+---
+
+Ahora imagínense si para conectarse a los servidores de Google tuvieramos que escribir
+https://192.168.0.11
+
+Y para entrar a Instagram tuvieramos que escribir https://192.168.0.58
+
+# Imposible!
+
+Por eso, para hacernos la vida un poco mas fácil existen
+
+### los dominios, y DNS.
+
+---
+
+Los dominios podemos comprarlos, nosotros compramos [coderhood.dev](https://coderhood.dev) en [Namecheap](https://www.namecheap.com/).
+
+Cada proveedor de dominios va a tener su DNS (Domain Name System), y eso nos va a permitir que podamos escribir el nombre de nuestro dominio y eso sea suficiente para navegar a nuestra web.
+
+El flujo es el siguiente: al escribir [https://coderhood.dev](https://coderhood.dev) navegamos directamente al DNS de [namecheap](https://www.namecheap.com/). Este revisa en su lista cual es la IP de nuestra web, y nos redirecciona hacia esa IP.
+
+## Con esto ya no necesitamos acordarnos de nuestra IP!
+
+(se imaginan que mundo oscuro seria?)
+
+---
+
+Supongamos ahora que nos conectamos a [twitter.com](https://twitter.com)
+
+como se conecta un servidor con una base de datos
