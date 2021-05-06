@@ -1,4 +1,4 @@
-import { themes } from 'mdx-deck'
+import { themes, Image } from 'mdx-deck'
 export const theme = themes.book
 
 import hackermanImg from '../../assets/hacking-time.gif'
@@ -6,6 +6,13 @@ import internetImg from '../../assets/internet-abduction.gif'
 import ipImg from '../../assets/ip.gif'
 import serverImg from '../../assets/data-center.jpeg'
 import httpImg from '../../assets/http.png'
+import diagramProtocolsImg from '../../assets/diagram-protocols.png'
+import diagramDNSImg from '../../assets/diagram-dns.png'
+import wikipediaImg from '../../assets/wikipedia.png'
+import serverFilesImg from '../../assets/server-files.png'
+import dataBaseImg from '../../assets/data-base.png'
+import fullstackImg from '../../assets/fullstack.jpeg'
+import shallWeBeginImg from '../../assets/shall-we-begin.png'
 
 # Hola!
 ### Aprender programación puede ser abrumador, por eso es mejor hacerlo juntos.
@@ -143,6 +150,14 @@ HTTPS es la evolución de HTTP, y encripta la información para que esta viaje s
 
 ---
 
+Entonces, TCP/IP nos transforma la información para que viaje por ✨ la internet ✨
+
+y HTTP nos dice una vez que llega a un servidor, como recibir la informacion de este.
+
+<Image src={diagramProtocolsImg} height={400} />
+
+---
+
 Ahora imagínense si para conectarse a los servidores de Google tuvieramos que escribir
 https://192.168.0.11
 
@@ -164,10 +179,79 @@ El flujo es el siguiente: al escribir [https://coderhood.dev](https://coderhood.
 
 ## Con esto ya no necesitamos acordarnos de nuestra IP!
 
-(se imaginan que mundo oscuro seria?)
+<Image src={diagramDNSImg} height={400} />
 
 ---
 
-Supongamos ahora que nos conectamos a [twitter.com](https://twitter.com)
+Supongamos ahora que nos conectamos a [wikipedia.com](https://es.wikipedia.org/wiki/Wikipedia:Portada)
 
-como se conecta un servidor con una base de datos
+Una vez que cargue la página vamos a ver todos los elementos en pantalla que estamos acostumbrados a ver.
+
+Como hace nuestro navegador para mostrarnos en pantalla, o mejor dicho renderizar, todo esto y que lo podamos ver así?
+
+<Image src={wikipediaImg} />
+
+---
+
+Una vez que nos conectamos con el servidor de Wikipedia, este nos responde con 3 tipos de archivos que el navegador sabe como mostrar.
+
+## Estos son archivos HTML, CSS y JavaScript
+
+### HTML
+
+Nos va a dar la estructura de la página, que elementos se ven en pantalla
+
+### CSS
+
+Nos va a decir como se ve cada elemento
+
+### JavaScript
+
+Nos va a dar la interactividad de la página
+
+---
+
+Estos archivos contienen contienen código en su propio lenguaje.
+
+Así, al grupo de personas que se encargan de programar en estos lenguajes y crear las interfaces visuales y conexiones con servidores se les llama
+
+# Frontend Developers
+
+Incluye todo lo que podemos ver en pantalla, ya sea en web o apps para celular. Animaciones, conexion con servidores, interacciones con el usuario, etc.
+
+
+<Image src={serverFilesImg} height={400} width={1200} />
+
+---
+
+Ahora, nuevo contenido se agrega todo el tiempo a las webs en general.
+
+Ese nuevo contenido, se almancena en Bases de Datos y van a ser los servidores los que van a poder conectarse con estas Bases de Datos para traer información, modificarla o borrarla.
+
+Cada vez que abrimos Twitter, por ejemplo, el servidor se conecta con la Base de Datos para traer los tweets recomendados para nosotros.
+
+<Image src={dataBaseImg} height={400} />
+
+---
+
+Al grupo de personas encargado de programar los servidores, y las bases de datos se les llama
+
+# Backend Developers
+
+Incluye seguridad del servidor y base de datos, optimizacion de performance, etc.
+
+---
+
+Y al grupo de personas capaces de trabajar en los dos frentes, pudiendo crear aplicaciones completas tanto en la interfaz, como los servidores y bases de datos se les conoce como
+
+# Full Stack Developers
+
+<Image src={fullstackImg} height={600} width={600} />
+
+---
+
+A esto vamos a apuntar llegar en 6 meses.
+
+A tener el conocimiento para crear aplicaciones web completas, de principio a fin.
+
+<Image src={shallWeBeginImg} height={700} />
