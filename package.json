@@ -7,7 +7,9 @@
   "license": "MIT",
   "scripts": {
     "clase-0": "mdx-deck modulos/0-introducción/1-como-funciona-el-internet.mdx",
-    "clase-1": "mdx-deck modulos/1-fundamentos-de-programación/1-datos-y-algoritmos.mdx"
+    "clase-1": "mdx-deck modulos/1-fundamentos-de-programación/1-datos-y-algoritmos.mdx",
+    "build": "mdx-deck build modulos/0-introducción/1-como-funciona-el-internet.mdx",
+    "build-pdf": "npx website-pdf http://localhost:8000/print -o modulos/0-introducción/1-como-funciona-el-internet.pdf"
   },
   "dependencies": {},
   "devDependencies": {
