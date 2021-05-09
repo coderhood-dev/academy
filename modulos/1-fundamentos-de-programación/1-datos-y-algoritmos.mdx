@@ -1,0 +1,397 @@
+import { themes } from 'mdx-deck'
+
+export const theme = themes.book
+
+<Header>
+
+Fundamentos de programación con Javascript - Capitulo 1
+
+</Header>
+
+## Bienvenides al mundo de la programación!
+Resolvamos primero la grán pregunta que deben tener todes
+
+<Steps>
+
+# Que es programar?
+
+</Steps>
+
+---
+
+### Programar, es hablarle a la máquina a travez de un lenguaje que pueda entender.
+
+Como la computadora solo entiende lenguaje binario ( 0 y 1 ), creamos lenguajes que nos permiten comunicarnos con ella utilizando lenguaje humano (mayormente ingles). Nosotros hablamos español, las maquinas hablan JavaScript, Python, Ryby, etc. Estos son llamados lenguajes de programación.
+
+.
+
+Y en que consiste programar? Mayormente se trata de escribir algoritmos que la máquina pueda ejecutar. También está la parte de maquetado y creación de interfaces, pero eso queda para el módulo de Diseño Web.
+
+---
+
+## Los algoritmos
+
+Son una secuencia de pasos para llegar a un objetivo.
+
+Imaginate una receta para cocinar una torta, eso es un algoritmo.
+ * Primero obtene 3 huevos, leche y harina. 
+ * Mezcla los huevos con la leche y revolvé.
+ * Andá agregando harina de a poco hasta conseguir una masa.
+
+Dentro de los algoritmos podemos encontrar condiciones, procesar informacion y ejecutar acciones
+
+---
+
+Vamos a empezar nuestro viaje programando, empezando por el lenguaje
+# JavaScript
+
+<Steps>
+
+* Es el unico lenguaje de programación que se puede ejecutar en un navegador
+
+* Nos va a servir tanto para Frontend como para Backend
+
+* Super popular, con gran demanda en el mercado
+
+* De los lenguajes más faciles para empezar, pero tán versatil que es dificil de dominar
+
+</Steps>
+
+---
+
+<!-- ---
+
+### Algoritmo para encender una lampara
+<img src="/assets/lamp-algoritm.png" alt="drawing" width="400"/>
+
+--- -->
+<!-- ## Que es un programa?
+Un programa informatico o programa de computadora es una secuencia de instrucciones (algoritmos), escritas para realizar una tarea especifica en una computadora.
+
+--- -->
+
+## Historia
+> Aclaración: no es necesario que entiendan ni memoricen la historia de JavaScript.
+
+A principios de los años 90, la mayoría de usuarios que se conectaban a Internet lo hacían con módems a una velocidad máxima de 28.8 kbps. En esa época, empezaban a desarrollarse las primeras aplicaciones web y por tanto, las páginas web comenzaban a incluir formularios complejos.
+
+Con unas aplicaciones web cada vez más complejas y una velocidad de navegación tan lenta, surgió la necesidad de un lenguaje de programación que se ejecutara en el navegador del usuario. De esta forma, si el usuario no rellenaba correctamente un formulario, no se le hacía esperar mucho tiempo hasta que el servidor volviera a mostrar el formulario indicando los errores existentes.
+
+**Brendan Eich**, un programador que trabajaba en Netscape, pensó que podría solucionar este problema adaptando otras tecnologías existentes (como _ScriptEase_) al navegador Netscape Navigator 2.0, que iba a lanzarse en 1995. Inicialmente, Eich denominó a su lenguaje _LiveScript_.
+
+---
+
+Posteriormente, Netscape firmó una alianza con Sun Microsystems para el desarrollo del nuevo lenguaje de programación. Además, justo antes del lanzamiento Netscape decidió cambiar el nombre por el de JavaScript. La razón del cambio de nombre fue exclusivamente por marketing, ya que Java era la palabra de moda en el mundo informático y de Internet de la época.
+
+La primera versión de JavaScript fue un completo éxito y Netscape Navigator 3.0 ya incorporaba la siguiente versión del lenguaje, la versión 1.1. Al mismo tiempo, Microsoft lanzó JScript con su navegador Internet Explorer 3. JScript era una copia de JavaScript al que le cambiaron el nombre para evitar problemas legales.
+
+Para evitar una guerra de tecnologías, Netscape decidió que lo mejor sería estandarizar el lenguaje JavaScript. De esta forma, en 1997 se envió la especificación JavaScript 1.1 al organismo ECMA _European Computer Manufacturers Association_).
+
+ECMA creó el comité TC39 con el objetivo de _"estandarizar de un lenguaje de script multiplataforma e independiente de cualquier empresa"_. El primer estándar que creó el comité TC39 se denominó **ECMA-262**, en el que se definió por primera vez el lenguaje ECMAScript.
+
+Por este motivo, algunos programadores prefieren la denominación _ECMAScript_ para referirse al lenguaje JavaScript. De hecho, JavaScript no es más que la implementación que realizó la empresa Netscape del estándar ECMAScript.
+
+La organización internacional para la estandarización (ISO) adoptó el estándar ECMA-262 a través de su comisión IEC, dando lugar al estándar ISO/IEC-16262.
+
+---
+
+Intentemos crear un pequeño programa utilizando el lenguaje de programacion `JavaScript`, pero para eso primero debemos tener en claro 2 conceptos
+- Datos
+- Logica y control de decisiones
+
+---
+## Datos
+En los algoritmos mayormente nos encontramos con la necesidad de guardar informacion (Un nombre, un numero, un estado). 
+Veamos un ejemplo en la cocina.
+
+---
+#### Algoritmo para hacer galletitas
+<img src="/assets/cookies-algoritm.png" alt="drawing" width="400"/>
+
+---
+## Logica y control de decisiones
+*- 'En cualquier lenguaje de programación, el código necesita realizar decisiones y llevar a cabo diferentes acciones acordes dependiendo de distintas entradas. Por ejemplo, en un juego, si la vida del jugador es 0, entonces se termina el juego.'*
+
+---
+El algoritmo anterior, entonces corresponderia al siguiente pseudo codigo:
+```javascript
+vidaRestante = 0;
+
+si (vidaRestante == 0) {
+	// el jugador no tiene vida restante, game over
+  	informar('Juego terminado')
+} sino {
+  	// el jugador esta con vida, continuar el juego
+  
+}
+```
+(Notese que usamos '=' para asignar valores y '==' para comparar)
+
+---
+### Pero que tal si queremos agregar mas condiciones?
+```javascript
+vidaRestante = 0;
+quieroSeguirJugando = true; // verdadero en ingles
+
+si ((vidaRestante == 0) Y (quieroSeguirJugando == true)) {
+  // el jugador no tiene vida y quiere seguir jugando
+  // reiniciar el juego
+}
+```
+Aca utlizamos el operador 'Y' para componer dos condiciones, veamos los operadores logicos mas en detalle
+
+---
+### Operadores logicos
+**Operador AND**
+En el ejemplo anterior mezclamos dos condiciones bajo el operador 'Y' (AND), esta composicion de condiciones requiere que ambas condiciones SI O SI sean verdaderas para que la composicion sea verdadera
+```javascript
+condicionA = true; // verdadera
+condicionB = false; // falsa
+
+si (condicionA Y condicionB) {
+	// ambas condiciones son verdaderas
+} sino {
+	// una de las condiciones es falsa
+}
+```
+
+---
+**Operador OR**
+El operador AND requiere que ambas condiciones sean verdaderas, pero el operador 'O' (OR) solo requiere que una de las condiciones sea verdadera para que la composicion de ambas sea verdadera
+```javascript
+condicionA = true;
+condicionB = false;
+
+si (condicionA O condicionB) {
+	// alguna de las condiciones es verdadera
+} sino {
+	// ambas condiciones son falsas
+}
+```
+
+---
+### Del pseudocodigo, a JavaScript
+Traduzcamos las instrucciones que conocemos hasta ahora
+
+| Español       	| JavaScript			|
+| ---  				| --- 					|
+| Es igual		 	| `==`					|
+| Y 				| `&&`						|
+| O 				| <code>&#124;&#124;</code>		|
+| si 				| `if` 				    |
+| sino 				| `else`				|
+| informar('Hola') 	| `console.log('Hola');`  |
+
+---
+### Nuestro primer 'Hola mundo' en JavaScript
+Ahora si, sabiendo un poco de datos y algo de logica, podemos escribir nuestro primer 'Hola mundo!'
+```javascript
+if (true) {
+	console.log('Hola mundo!');
+} else {
+	console.log('Adios mundo!');
+}
+```
+Pero y los datos? Como utilizamos variables en JavaScript?
+
+---
+## Variables
+Una variable esta compuesta por un espacio en memoria, un dato y un identificador el cual se usa para acceder a ese espacio en memoria y recuperar el dato
+`codigo en JavaScript`
+```javascript
+var huevos = 3;
+var harina;
+var miNombre = "Jose";
+var foo;
+```
+- '**var**' es la palabra clave del lenguaje para declarar una variable en la memoria
+- '**huevos**' es el identificador -
+- **3** corresponde al dato.  (La informacion que nos interesa)
+
+Como se ve esto en la memoria?
+
+---
+
+## Esquema de variables en memoria
+
+<img src="/assets/memory-scheme.png" alt="drawing" width="550"/>
+
+Imprimamos en pantalla las variables que declaramos
+```javascript
+console.log(huevos); // 3
+console.log(harina); // undefined (Sin definir)
+console.log(miNombre); // "Jose"
+console.log(foo); // undefined (Sin definir)
+```
+
+Que tipos de datos existen? Es lo mismo un **numero** que un **texto**?
+
+---
+## Tipado
+Un tipo es un atributo que define ciertas restricciones a los datos,
+es decir la clase de dato que va a contener la variable.
+
+| Tipo      		| JavaScript	| Ejemplos 		|
+| ---  				| --- 			| --- 			|
+| numero 			| `number`		| `4`, `5.3`, `7` |
+| texto 			| `string` 		| `"Jose"` 		  |
+| verdadero o falso	| `boolean` 	| `true`, `false` |
+
+---
+
+## Algunos ejemplos
+```javascript
+var foo = "Martin"; //string
+var baz = 3; //number
+var too = false; //boolean
+```
+
+---
+
+##### Algunas operaciones con numeros
+
+```javascript
+var a = 3;
+var b = 6;
+var r1 = a + b; // 9
+var r2 = a * b; // 18
+var r3 = b - a; // 3
+var r4 = b / a; // 2
+```
+Cuantas variables se declararon en este programa?
+
+---
+
+## Operaciones con textos: Concatenacion
+
+```javascript
+var nombre = "Martin";
+var apellido = "Gomez";
+var nombreCompleto = nombre + " " + apellido;
+console.log(nombreCompleto); // Martin Gomez
+```
+---
+## JavaScript es un lenguaje de tipado dinamico
+
+Esto que significa?
+Una caracteristica para clasificar un lenguaje es por su tipado (Tipado dinamico y tipado estatico)
+
+En el lenguaje de **tipado estatico** las variables **no** pueden cambiar de tipo de dato.
+
+Ejemplo en `Java` (Lenguaje de tipado estatico)
+```java
+	String miNombre = "Juan";
+	miNombre = 14; //Error de compilacion
+```
+---
+En cambio un lenguaje de **tipado dinamico** las variables si pueden cambiar de tipo de dato durante la ejecucion.
+
+Ejemplo en `JavaScript` (Tipado dinamico)
+```javascript
+	var miNombre = "Juan";
+	miNombre = 14;
+```
+En el ultimo ejemplo el programa no presenta errores ya que javascript permite el dinamismo de tipos
+Es esto importante? Veamos el ultimo tema de la seccion
+
+---
+### Curiosidades del tipado en JavaScript
+Supongamos que instanciamos las siguientes variables
+```javascript
+var huevos = "3";
+var harina = 3;
+```
+la variable **huevos** es de tipo texto o numerico?
+
+---
+Lo cierto es que la variable **huevos** es de tipo texto al usar  comillas (" ") al instanciarla
+```javascript
+var huevos = "3"; // string
+var harina = 3;   // number
+if (huevos == harina) {
+	console.log("Son iguales!");
+}
+// el programa imprime "Son iguales" en pantalla
+```
+Como evitamos que se imprima en pantalla "Son iguales" ?
+
+---
+#### Comparacion por valor y comparacion por tipo
+- el comparador == compara valores 
+```javascript
+var huevos = "3";
+var harina = 3;
+var comparacionPorValor = ( huevos == harina ) // verdadero
+```
+- el comparador === compara valor y tipos
+```javascript
+var huevos = "3";
+var harina = 3;
+var comparacionPorValor = ( huevos === harina ) // falso
+```
+---
+### Ejercitacion
+Veamos un ejemplo:
+En un video juego, el personaje tomara automaticamente una pocion de vida que le regenera (si es que dispone de una) 1 punto de vida cuando su vida llegue a cero. Informar en pantalla en caso que el jugador pierda.
+```javascript
+vida = 4;
+pocionesDeVida = 2;
+
+si ( vida == 0 ) {
+	si ( pocionesDeVida > 0) {
+		vida = vida + 1;
+		pocionesDeVida = pocionesDeVida - 1;
+	} sino {
+		informar('Perdiste!');
+	}
+}
+```
+Pasar el pseudo codigo a JavaScript
+
+---
+## Ejercicios
+#### 1) Las galletitas de Ema
+Emanuel quiere cocinar galletitas y quiere un programa que lo ayude a saber que debe comprar y en caso que cuente con todos los ingredientes, informar que puede cocinar las galletas. La receta pide los siguientes ingredientes
+
+- 3 huevos
+- 1 barra de chocolate
+- 0.5 kilos de harina
+- 5 cucharadas de azucar
+
+Los ingredientes que tiene Ema tienen que ser variables al inicio del programa que sean faciles de editar
+
+###2) La tienda de ropa
+Una tienda de ropa desea tener un programa que le permita calcular los aumentos a sus prendas, para eso se tienen los datos
+- `precioDePrenda` (que ronda entre los 1500 y 3000 pesos)
+- `porcentajeDeAumento` (que ronda entre el 25-100% )
+- `precioFinal` (precioDePrenda con el aumento agregado)
+
+Ademas, implementar las siguiente funcionalidades:
+- El programa debe informar en pantalla el precio final
+- El programa debe informar en pantalla 'Precio excedido' cuando el precio final supere los $4000
+
+###3) Dia de paga
+En una pizzeria requieren un programa que calcule cuanto cobraran neto los repartides al final del dia (Todos cobran igual)
+
+Se tienen los siguientes datos obligatorios
+- `repartidores` (Cantidad de repartidores, puede ser cualquier numero entero)
+- `esFeriado` (`true` si es Feriado, `false` si no)
+- `gananciaDelDia` (Cuanto recaudo la pizzeria para distribuir a los empleados)
+- `porcentajeParaSueldos` (Un porcentaje de `gananciaDelDia`)
+- `sueldoNetoDeRepartidor` (Cuanto gana en bolsillo el repartidor)
+- `gananciaDelComercioFinal` (Cuanto gana el comercio una vez pagados los sueldos y demas)
+
+Se sabe que:
+- En feriados: `porcentajeParaSueldos` es del 80% de `gananciaDelDia` mientras que en dias normales, es del 65%
+- El comercio utiliza el 20% de su parte restante luego de pagar los sueldos para pagar el combustible
+
+---
+### Fuentes
+https://es.wikipedia.org/wiki/Algoritmo
+https://es.wikipedia.org/wiki/Programa_inform%C3%A1tico
+https://es.wikipedia.org/wiki/Lenguaje_de_programaci%C3%B3n
+https://es.wikipedia.org/wiki/L%C3%B3gica_computacional
+https://developer.mozilla.org/es/docs/Learn/JavaScript/First_steps/Variables
+https://developer.mozilla.org/es/docs/Web/JavaScript/Data_structures
+
+---
