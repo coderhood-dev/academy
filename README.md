@@ -29,7 +29,7 @@ El material que preparamos esta pensado para que puedas aprender lo necesario pa
 * [Cómo funciona el internet?](./modulos/0-introducción/1-como-funciona-el-internet.mdx)
 
 #### Fundamentos de programación
-* [Datos y algoritmos](./modulos/1-fundamentos-de-programación/1-datos.mdx)
+* [Datos y algoritmos](./modulos/1-fundamentos-de-programación/1-datos-y-algoritmos.mdx)
 * item
 * item
 
