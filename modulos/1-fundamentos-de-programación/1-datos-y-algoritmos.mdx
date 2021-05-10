@@ -1,4 +1,6 @@
-import { themes } from 'mdx-deck'
+import { themes, Image } from 'mdx-deck'
+import cookiesAlgoritm from '../../assets/cookies-algoritm.png'
+import memoryScheme from '../../assets/memory-scheme.png'
 
 export const theme = themes.book
 
@@ -19,9 +21,9 @@ Resolvamos primero la grán pregunta que deben tener todes
 
 ---
 
-### Programar, es hablarle a la máquina a travez de un lenguaje que pueda entender.
+### Programar, es hablarle a la máquina a través de un lenguaje que pueda entender.
 
-Como la computadora solo entiende lenguaje binario ( 0 y 1 ), creamos lenguajes que nos permiten comunicarnos con ella utilizando lenguaje humano (mayormente ingles). Nosotros hablamos español, las maquinas hablan JavaScript, Python, Ryby, etc. Estos son llamados lenguajes de programación.
+Como la computadora solo entiende lenguaje binario ( 0 y 1 ), creamos lenguajes que nos permiten comunicarnos con ella utilizando lenguaje humano (mayormente ingles). Nosotros hablamos español, las maquinas hablan JavaScript, Python, Ruby, etc. Estos son llamados lenguajes de programación.
 
 .
 
@@ -106,7 +108,13 @@ Veamos un ejemplo en la cocina.
 
 ---
 #### Algoritmo para hacer galletitas
-<img src="/assets/cookies-algoritm.png" alt="drawing" width="400"/>
+La receta de galletitas requiere: 2 huevos y 2kg harina
+
+<Image src={cookiesAlgoritm} 
+	style={{
+		maxHeight: "655px",
+		maxWidth: "500px"
+	}}/>
 
 ---
 ## Logica y control de decisiones
@@ -214,7 +222,13 @@ Como se ve esto en la memoria?
 
 ## Esquema de variables en memoria
 
-<img src="/assets/memory-scheme.png" alt="drawing" width="550"/>
+<Image src={memoryScheme} alt="drawing"
+	style={{
+		maxWidth: "865px",
+		maxHeight: "500px",
+	}}/>
+
+---
 
 Imprimamos en pantalla las variables que declaramos
 ```javascript
@@ -346,7 +360,7 @@ si ( vida == 0 ) {
 	}
 }
 ```
-Pasar el pseudo codigo a JavaScript
+Pasar el pseudo codigo a JavaScript en el editor de codigo Online [CodeSandbox](https://codesandbox.io/):
 
 ---
 ## Ejercicios
@@ -360,7 +374,9 @@ Emanuel quiere cocinar galletitas y quiere un programa que lo ayude a saber que 
 
 Los ingredientes que tiene Ema tienen que ser variables al inicio del programa que sean faciles de editar
 
-###2) La tienda de ropa
+---
+
+### 2) La tienda de ropa
 Una tienda de ropa desea tener un programa que le permita calcular los aumentos a sus prendas, para eso se tienen los datos
 - `precioDePrenda` (que ronda entre los 1500 y 3000 pesos)
 - `porcentajeDeAumento` (que ronda entre el 25-100% )
@@ -370,7 +386,9 @@ Ademas, implementar las siguiente funcionalidades:
 - El programa debe informar en pantalla el precio final
 - El programa debe informar en pantalla 'Precio excedido' cuando el precio final supere los $4000
 
-###3) Dia de paga
+---
+
+### 3) Dia de paga
 En una pizzeria requieren un programa que calcule cuanto cobraran neto los repartides al final del dia (Todos cobran igual)
 
 Se tienen los siguientes datos obligatorios
