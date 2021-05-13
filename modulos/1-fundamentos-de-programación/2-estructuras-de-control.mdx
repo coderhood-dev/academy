@@ -1,1 +1,241 @@
-# Estructuras de control
+import { themes, Image,  } from 'mdx-deck'
+
+import forFirstAppear from '../../assets/for-0.png'
+import forExplained from '../../assets/for-1.png'
+import forSolution from '../../assets/for-2.png'
+import whileFirstAppear from '../../assets/while-0.png'
+
+
+export const theme = themes.book
+
+<Header>
+
+Fundamentos de programación con Javascript - Capitulo 2
+Estructuras de control
+
+</Header>
+
+## Bienvenides a fundamentos de programacion, capitulo 2!
+
+### Antes de arrancar, hagamos un breve repaso
+### En la clase pasada dimos:
+
+<Steps>
+
+
+- Logica
+- Condicionales
+- Datos
+- Sintaxis basica de JavaScript (if, else, var..)
+
+</Steps>
+
+---
+
+Ahora si, hoy vamos a ver **estructuras de control**
+
+<Steps>
+
+- Vamos a presentar un problema
+- Estructura repetitivas, al rescate
+- Solución al problema del contador con estructura repetitiva for
+- Solución al problema del contador con estructura repetitiva while
+- Que cuidados hay que tener con las estructuras repetitivas
+- Estructura de control Switch
+
+</Steps>
+
+---
+
+## El problema:
+
+<Steps>
+
+- Tenemos una tarea: incrementar una variable en 1 unidad
+
+- Supongamos que necesitamos hacer esa misma tarea un numero determinado de veces ('X' veces)
+
+- Ese numero 'X' de veces debe variar (Puede ser 10 hoy, y mañana 100)
+
+- Diseñar un programa que solucione el problema
+
+</Steps>
+
+---
+
+## Modelando la solucion
+<Steps>
+
+<Step>
+
+- Sea el caso que la tarea se deba repetir 5 veces
+
+</Step>
+<Step>
+
+### Primero: Definir la variable
+        var contador = 0;
+
+</Step>
+<Step>
+
+### Segundo: Incrementamos 5 veces la variable contador
+        var contador = 0;
+        contador = contador + 1;
+        contador = contador + 1;
+        contador = contador + 1;
+        contador = contador + 1;
+        contador = contador + 1;
+        console.log(contador); // 5
+
+</Step>
+
+<Step>
+
+#### ... pero si debemos hacer la tarea 100 veces?
+
+</Step>
+
+</Steps>
+
+---
+
+## Estructuras repetitivas, al rescate
+
+<Steps>
+
+<Step>
+
+#### A nuestro pseudocodigo que creamos la clase pasada, le vamos a agregar una nueva funcion,
+#### la de repetir un bloque de codigo X veces
+
+</Step>
+<Step>
+
+    x = 100;
+
+    repetir (x) {
+        informar(x)
+    }
+
+</Step>
+<Step>
+
+#### el pseudocodigo anterior imprimiria:
+
+</Step>
+<Step>
+
+    1
+    2
+    3
+    4
+    ...
+    99
+    100
+
+</Step>
+
+</Steps>
+
+---
+
+## Estructuras repetitivas, al rescate
+
+### Traduzcamos el 'repetir' a la sintaxis de JavaScript. Y esto va a ser algo complicado
+#### Estructura repetitiva for:
+
+<Image src={forFirstAppear} 
+	style={{
+		maxHeight: "665px",
+		maxWidth: "1000px"
+	}}/>
+
+---
+
+## Estructuras repetitivas, al rescate
+### Pero y todo lo demas dentro del for ?!
+
+<Image src={forExplained} 
+	style={{
+		maxHeight: "665px",
+		maxWidth: "1000px"
+	}}/>
+
+---
+
+## Estructuras repetitivas, al rescate
+### Veamos un par de ejemplos mas
+Para eso, abramos [CodeSandbox](https://codesandbox.io/) y juguemos un rato con la estructura for
+
+
+---
+
+## Estructuras repetitivas, al rescate
+### Ahora, solucionemos el problema del contador con nuestra nueva herramienta
+
+#### Antes de ver la solucion, resolvamoslo en [CodeSandbox](https://codesandbox.io/).
+
+---
+
+# Solucion al problema con la estructura repetitiva for
+
+<Image src={forSolution} 
+	style={{
+		maxHeight: "600px",
+		maxWidth: "750px"
+	}}/>
+
+Pero podemos hacerlo de otra manera?
+
+---
+
+## Otra solucion al problema, con otra estructura repetitiva
+
+<Steps>
+
+<Step>
+
+Hasta ahora resolvimos el contador con una estructura **for**, veamos otra solucion
+
+</Step>
+<Step>
+
+Otra vez, a nuestro pseudocodigo le vamos a agregar una nueva funcionalidad,
+la estructura repetitiva **mientras**
+
+</Step>
+<Step>
+
+    x = 10;
+    contador = 0;
+
+    mientras (contador < x) {    // mientras 'contador' sea menor que 10
+    
+        contador = contador + 1
+
+    }
+
+</Step>
+<Step>
+
+Esta estructura 'mientras' a diferencia del 'repetir' repetira el bloque de codigo siempre
+que la condicion sea verdadera y no necesita una variable auxiliar.
+En este caso la condicion es (contador < x)
+
+</Step>
+
+</Steps>
+
+---
+
+### Traduzcamos el 'mientras' a la sintaxis de JavaScript.
+#### Estructura repetitiva while:
+
+<Image src={whileFirstAppear} 
+	style={{
+		maxHeight: "500px",
+		maxWidth: "750px"
+	}}/>
+
+---
