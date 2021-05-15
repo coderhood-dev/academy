@@ -1,1 +1,364 @@
-# Estructuras de control
+import { themes, Image,  } from 'mdx-deck'
+
+import forFirstAppear from '../../assets/for-0.png'
+import forExplained from '../../assets/for-1.png'
+import forSolution from '../../assets/for-2.png'
+import whileFirstAppear from '../../assets/while-0.png'
+import whileSolution from '../../assets/while-1.png'
+
+
+export const theme = themes.book
+
+<Header>
+
+Fundamentos de programación con Javascript - Capitulo 2
+Estructuras de control
+
+</Header>
+
+## Bienvenides a fundamentos de programacion, capitulo 2!
+
+### Antes de arrancar, hagamos un breve repaso
+### En la clase pasada dimos:
+
+<Steps>
+
+
+- Logica
+- Condicionales
+- Datos
+- Sintaxis basica de JavaScript (if, else, var..)
+
+</Steps>
+
+---
+
+Ahora si, hoy vamos a ver **estructuras de control**
+
+<Steps>
+
+- Vamos a presentar un problema
+- Estructura repetitivas, al rescate
+- Solución al problema del contador con estructura repetitiva for
+- Solución al problema del contador con estructura repetitiva while
+- Que cuidados hay que tener con las estructuras repetitivas
+- Ejercicios
+
+</Steps>
+
+---
+
+## El problema:
+
+<Steps>
+
+- Tenemos una tarea: incrementar una variable en 1 unidad
+
+- Supongamos que necesitamos hacer esa misma tarea un numero determinado de veces ('X' veces)
+
+- Ese numero 'X' de veces debe variar (Puede ser 10 hoy, y mañana 100)
+
+- Diseñar un programa que solucione el problema
+
+</Steps>
+
+---
+
+## Modelando la solucion
+<Steps>
+
+<Step>
+
+- Sea el caso que la tarea se deba repetir 5 veces
+
+</Step>
+<Step>
+
+### Primero: Definir la variable
+        var contador = 0;
+
+</Step>
+<Step>
+
+### Segundo: Incrementamos 5 veces la variable contador
+        var contador = 0;
+        contador = contador + 1;
+        contador = contador + 1;
+        contador = contador + 1;
+        contador = contador + 1;
+        contador = contador + 1;
+        console.log(contador); // 5
+
+</Step>
+
+<Step>
+
+#### ... pero si debemos hacer la tarea 100 veces?
+
+</Step>
+
+</Steps>
+
+---
+
+## Estructuras repetitivas, al rescate
+
+<Steps>
+
+<Step>
+
+#### A nuestro pseudocodigo que creamos la clase pasada, le vamos a agregar una nueva funcion,
+#### la de repetir un bloque de codigo X veces
+
+</Step>
+<Step>
+
+    x = 100; // cantidad de veces que debemos repetir
+    contador = 0;
+
+    repetir (x) {
+        contador = contador + 1;
+        informar(contador)
+    }
+
+</Step>
+<Step>
+
+#### el pseudocodigo anterior imprimiria:
+
+</Step>
+<Step>
+
+    1
+    2
+    3
+    4
+    ...
+    99
+    100
+
+</Step>
+
+</Steps>
+
+---
+
+## Estructura repetitiva FOR:
+
+### Traduzcamos el 'repetir' a la sintaxis de JavaScript. Y esto va a ser algo complicado
+
+<Image src={forFirstAppear} 
+	style={{
+		maxHeight: "665px",
+		maxWidth: "1000px"
+	}}/>
+
+---
+
+### Pero y todo lo demas dentro del for ?!
+
+<Image src={forExplained} 
+	style={{
+		maxHeight: "665px",
+		maxWidth: "1000px"
+	}}/>
+
+---
+
+### Veamos un par de ejemplos mas
+Para eso, abramos [CodeSandbox](https://codesandbox.io/) y juguemos un rato con la estructura for
+
+
+---
+
+## Estructuras repetitivas, al rescate
+### Ahora, solucionemos el problema del contador con nuestra nueva herramienta
+
+#### Antes de ver la solucion, resolvamoslo en [CodeSandbox](https://codesandbox.io/).
+
+---
+
+# Solucion al problema con la estructura repetitiva FOR
+
+<Image src={forSolution} 
+	style={{
+		maxHeight: "600px",
+		maxWidth: "750px"
+	}}/>
+
+Pero podemos hacerlo de otra manera?
+
+---
+
+## Otra solucion al problema, con otra estructura repetitiva
+
+<Steps>
+
+<Step>
+
+Hasta ahora resolvimos el contador con una estructura **for**, veamos otra solucion
+
+</Step>
+<Step>
+
+Otra vez, a nuestro pseudocodigo le vamos a agregar una nueva funcionalidad,
+la estructura repetitiva **mientras**
+
+</Step>
+<Step>
+
+    x = 10;
+    contador = 0;
+
+    mientras (contador < x) {    // mientras 'contador' sea menor que 10
+    
+        contador = contador + 1
+
+    }
+
+</Step>
+<Step>
+
+Esta estructura 'mientras' a diferencia del 'repetir' repetira el bloque de codigo siempre
+que la condicion sea verdadera y no necesita una variable auxiliar.
+En este caso la condicion es (contador < x)
+
+</Step>
+
+</Steps>
+
+---
+
+## Estructura repetitiva WHILE:
+### Traduzcamos el 'mientras' a la sintaxis de JavaScript.
+
+<Image src={whileFirstAppear} 
+	style={{
+		maxHeight: "500px",
+		maxWidth: "750px"
+	}}/>
+
+---
+
+### Veamos un par de ejemplos mas
+Para eso, abramos [CodeSandbox](https://codesandbox.io/) y juguemos un rato con la estructura for
+
+---
+
+## Estructuras repetitivas, al rescate
+### Ahora, solucionemos el mismo problema pero con la estructura WHILE
+
+#### Antes de ver la solucion, resolvamoslo en [CodeSandbox](https://codesandbox.io/).
+
+---
+
+# Solucion al problema con la estructura repetitiva WHILE
+
+<Image src={whileSolution} 
+	style={{
+		maxHeight: "685px",
+		maxWidth: "750px"
+	}}/>
+
+---
+
+# Cuidado con estas estructuras
+
+- Debemos tener cuidado de no hacer muchas repeticiones
+- Debemos tener cuidado de no crear loops infinitos
+
+---
+
+### No intenten esto en casa
+
+    while (true) {   
+
+        console.log('Esto no parece una buena idea');
+
+    }
+
+---
+
+## Antes de saltar a los ejercicios, veamos como utilizar el operador '%'
+
+Este operador nos devuelve el resto de la division de dos numeros: 
+
+    var resto = 9 % 2;  //  (4 * 2 = 8) => (9 - 8 = 1)
+    console.log(resto)  //  1
+
+    var resto2 = 13 % 5 //  (5 * 2 = 10) => (13 - 10 = 3)
+    console.log(resto2)  //  3
+
+    var resto2 = 8 % 3 //  (2 * 3 = 6) => (8 - 6 = 2)
+    console.log(resto2)  //  2
+
+---
+
+## Reconocer numeros pares con el operador '%'
+
+    var esNuevePar = 9 % 2 === 0;
+    console.log('El numero 9 es par? ', esNuevePar);
+
+    var esCuatroPar = 4 % 2 === 0;
+    console.log('El numero 4 es par? ', esCuatroPar);
+
+---
+
+## Ejercicios
+
+### 1) Pares
+
+Sea una variable numerica entera y positiva '`limite`':
+
+    - Recorrer desde 0 hasta `limite`
+    - Imprimir en pantalla los numeros pares (No la cantidad de numeros pares)
+
+---
+
+### 2) Contador
+
+Sea una variable numerica entera y positiva '`limite`':
+
+- Recorrer desde 0 hasta `limite`
+- Imprimir al final del programa la cantidad de numeros impares
+- Imprimir al final del programa la cantidad de numeros menores de `limite` / 2
+
+---
+
+### 3) Contador 2: La venganza del contador
+
+Sea una variable numerica entera y positiva '`limite`':
+
+- Recorrer desde 0 hasta que se cumpla una de las siguientes condiciones:
+    - Se llega a `limite`
+    - La cantidad de numeros pares desde 0 hasta `limite`
+        es mayor a una variable anteriormente creada llamada `final`
+- Al final del recorrido imprimir la cantidad de numeros multiplos de 3
+- Al final del recorrido imprimir la suma de todos los numeros entre el 0
+    hasta que se termine el recorrido
+
+---
+
+### 4) La secuencia de Fibonacci
+
+    En matemáticas, la sucesión o serie de Fibonacci es la 
+    siguiente sucesión infinita de números naturales:
+
+    0 , 1 , 1 , 2 , 3 , 5 , 8 , 13 , 21 
+
+    La sucesión comienza con los números 0 y 1,​ a partir de estos
+    cada término es la suma de sus dos anteriores
+
+Sea una variable numerica entera y positiva '`limite`':
+
+- Recorrer desde 0 hasta `limite`
+- Imprimir tantos terminos de la secuencia como repeticions de 0 hasta `limite`
+
+Ejemplo: si `limite` = 6, imprimir `0, 1, 1, 2, 3, 5`
+
+---
+
+Fuentes
+- https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/while
+- https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/for
+- https://es.wikipedia.org/wiki/Sucesi%C3%B3n_de_Fibonacci
