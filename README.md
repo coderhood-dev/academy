@@ -30,7 +30,7 @@ El material que preparamos esta pensado para que puedas aprender lo necesario pa
 
 #### Fundamentos de programación
 * [Datos y algoritmos](./modulos/1-fundamentos-de-programación/1-datos-y-algoritmos.mdx)
-* item
+* [Estructuras de control](./modulos/1-fundamentos-de-programación/2-estructuras-de-control.mdx)
 * item
 
 #### [Programación web](./modulos/2-diseño-web/html.md)
