@@ -1,0 +1,714 @@
+import { themes, Image, Head } from "mdx-deck";
+import Code from 'mdx-code';
+
+import coderhoodTheme from '../../theme'
+import dataStructures from '../../assets/data-structures.gif'
+import object from '../../assets/object.png'
+import talkingIsCheap from '../../assets/talking-is-cheap.jpeg'
+import fichero from '../../assets/fichero.png'
+import inceptionLenses from '../../assets/inception-lenses.gif'
+import pushPopCandy from '../../assets/push-pop-candy.jpeg'
+import pushPop from '../../assets/push-pop.png'
+
+export const theme = themes.book;
+
+<Head>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet"/>
+</Head>
+
+## Estructuras de datos
+
+
+Hoy vamos a aprender
+
+<Steps>
+
+* Que es un object
+* Como agregamos, sacamos y vemos info de un object
+* Que es un array
+* Como agregamos, sacamos y vemos info de un array
+* Ejemplos y casos de uso
+* Resolución de ejercicios en vivo
+
+</Steps>
+
+---
+
+Hasta ahora veniamos utilizando variables con datos simples en su interior.
+
+Las variables podian ser de tipo string, number, boolean o ser funciones.
+
+<Code>
+
+```js
+let nombre = "Ema"
+console.log(typeof nombre)
+```
+
+</Code>
+
+<Code>
+
+```js
+let edad = 27
+console.log(typeof edad)
+```
+
+</Code>
+
+<Code>
+
+```js
+let esDiestro = false
+console.log(typeof esDiestro)
+```
+
+</Code>
+
+<Code>
+
+```js
+let saludar = function (nombre) {
+  console.log("Hola " + nombre + "!")
+}
+
+console.log(saludar)
+```
+
+</Code>
+
+---
+
+Pero tambien podemos almacenar
+
+# Estructuras de datos
+
+Estas nos dan formas de organizar información, cada estructura es la mejor para algun cierto caso de uso.
+
+Nosotros vamos a aprender a usar dos, Objects y Arrays. Otras estructuras que existen son Listas, Arboles, Grafos, etc.
+
+<Image src={dataStructures} height={400} width={500} />
+
+---
+
+# Objects
+
+Almacena datos desordenados a travez de clave y valor.
+
+Osea, acá voy a guardar datos poniendoles un nombre y con ese nombre los voy a recuperar despues. Algo así como ponerle una etiqueta a un objeto y meterla en un cajón o cartera.
+
+<Image src={object} height={400} width={500} />
+
+---
+
+Vamos a verlo en código
+
+<Code>
+
+```js
+
+let emaObjeto = {
+  nombre: 'Ema',
+  edad: 27,
+  tieneGato: true
+}
+
+console.log(emaObjeto)
+
+```
+
+</Code>
+
+<Steps>
+
+  Que más puedo agregar dentro de un objeto?
+
+  ### Dentro de cualquier estructura de datos vamos a poder obtener, agregar, modificar o sacar datos. 
+
+</Steps>
+
+---
+
+Como obtenemos los datos que estan en un objeto? Hay dos formas:
+
+<Code>
+
+```js
+
+let usuario = {
+  nombre: 'Ema',
+  edad: 27,
+  tieneSombrero: false
+}
+
+// la mas usada y recomendada
+console.log(usuario.tieneSombrero)
+
+```
+
+</Code>
+
+<Code>
+
+```js
+
+let usuario = {
+  nombre: 'Ema',
+  edad: 27,
+  tieneSombrero: false
+}
+
+// opcional que puede servir para casos en particular
+console.log(usuario['tieneSombrero'])
+
+```
+
+</Code>
+
+---
+
+Y como agregamos o modificamos datos en un objeto?
+
+<Code>
+
+```js
+
+// este es el momento de declaracion del objeto, aca agregamos los datos iniciales
+let usuario1 = {
+  nombre: 'Ema',
+  edad: 27,
+  tieneSombrero: false
+}
+
+// iniciarlo vacio tambien es valido
+let usuario2 = {}
+
+// en cualquiera de los dos casos podemos agregar o modificar datos simplemente asi
+
+usuario1.tieneSombrero = true // aca estoy modificando
+
+usuario2.nombre = "Escanor" // aca estoy agregando
+usuario2.esGato = true
+
+console.log(usuario1)
+console.log(usuario2)
+
+```
+
+</Code>
+
+---
+
+Por último, asi removemos datos de un objeto
+
+<Code>
+
+```js
+
+let usuario = {
+  nombre: 'Ema',
+  edad: 27,
+  tieneSombrero: false
+}
+
+delete usuario.tieneSombrero // delete = eliminar en ingles
+
+console.log(usuario)
+```
+
+</Code>
+
+---
+
+### Excelente, para que me sirve 😅?
+
+Usamos objetos para agrupar informacion similar, en el dia a dia como desarrollador cuando nos comuniquemos con un servidor vamos a recibir la informacion agrupada en objetos la gran mayoria de las veces. Como regla general, si diferentes datos pertenecen a algo y vamos a necesitar acceder por el nombre a estos datos, seguramente debamos guardar esta info en objetos.
+
+<Code>
+
+```js
+
+// Se tiene la informacion de los alumnos de una carrera.
+// Para cada alumno se tiene su nombre, apellido, dni, edad, y carrera que esta haciendo.
+// Podriamos modelarlo asi con lo que sabemos hasta ahora.
+
+let alumno1 = {
+  nombre: 'Mirtha',
+  apellido: 'Legrand',
+  dni: '00000001',
+  edad: Infinity,
+  carrera: 'Analista Programador Universitario'
+}
+
+// ... alumno2, alumno3, etc
+
+```
+
+</Code>
+
+---
+
+Ahora seguimos con arrays, pero primero
+
+# Tiempo de tomar agua 🔫
+
+---
+
+# Arrays
+
+Almacena datos ordenados por su posicion.
+
+Osea, acá voy a guardar datos y despues para sacarlos voy a tener que recorrer el array hasta encontrarlo.
+
+<Image src={fichero} />
+
+---
+
+Vamos a verlo en código
+
+<Code>
+
+```js
+
+// los valores se escriben separados por , al igual que en los objetos
+let usuarios = ['Ema', 'Lucas', 'Meison', 'Luis', 'Pablo']
+
+console.log(usuarios)
+
+```
+
+</Code>
+
+<Code>
+
+```js
+
+// puedo guardar todo tipo de datos
+let datosRandom = ['Ema', true, 999]
+
+// aunque tener los datos sueltos no me sirve de mucho..
+console.log(datosRandom)
+
+```
+
+</Code>
+
+---
+
+Dentro de los arrays podemos guardar tambien objetos!
+
+<Code>
+
+```js
+
+// aca defino usuarios
+let user1 = {
+  nombre: 'Ema',
+  edad: 27
+}
+
+let user2 = {
+  nombre: 'Meison',
+  edad: 27
+}
+
+// y aca creo un array de usuarios
+let usuarios = [user1, user2]
+
+```
+
+</Code>
+
+<Steps>
+
+  Y dentro de un objeto podria definir un array?
+
+</Steps>
+
+---
+
+Podemos tener objetos dentro de arrays y arrays dentro de objetos
+
+<Code>
+
+```js
+
+let user1 = {
+  nombre: 'Ema',
+  edad: 27,
+  habilidades: ['html, css, javascript, react']
+}
+
+let user2 = {
+  nombre: 'Meison',
+  edad: 27,
+  habilidades: ['mongodb, node, express']
+}
+
+let usuarios = [user1, user2]
+
+```
+
+</Code>
+
+<Image src={inceptionLenses} height={400} width={700}/>
+
+---
+
+Para obtener los datos de un array necesitamos decir la posicion a la que queremos acceder, ya que los datos no se guardan con una clave como en los objetos, sino por posicion empezando desde 0.
+
+<Code>
+
+
+```js
+
+let usuarios = [
+  {
+    nombre: 'Ema',
+    edad: 27,
+    habilidades: ['html, css, javascript, react']
+  },
+  {
+    nombre: 'Meison',
+    edad: 27,
+    habilidades: ['mongodb, node, express']
+  }
+]
+
+console.log(usuarios[0])
+
+let pablo = {
+  nombre: 'Pablo',
+  edad: 32,
+  habilidades: ['unity, javascript, node, react']
+}
+
+usuarios[2] = pablo
+
+console.log(usuarios)
+
+
+```
+
+</Code>
+
+---
+
+Y como agregamos y eliminamos datos en un array?
+Usando las funciones push y pop
+
+<Image src={pushPopCandy} width={600} height={600} />
+
+Feeling old?
+
+---
+
+
+Enrealidad push y pop se ve mas asi
+
+<Image src={pushPop} width={300} height={200} />
+
+<Code>
+
+```js
+
+// agregando dias de la semana usando push
+let dias = []
+
+dias.push('lunes')
+dias.push('martes')
+dias.push('miercoles')
+
+console.log(dias)
+
+```
+
+</Code>
+
+---
+
+Tambien podemos agregar objetos, esto es muy usado y nos va a servir un monton
+
+<Code>
+
+
+```js
+
+let usuarios = []
+
+let user1 = {
+  nombre: 'Ema',
+  edad: 27,
+  habilidades: ['html, css, javascript, react']
+}
+
+usuarios.push(user1)
+console.log(usuarios)
+
+let user2 = {
+  nombre: 'Meison',
+  edad: 27,
+  habilidades: ['mongodb, node, express']
+}
+
+usuarios.push(user2)
+console.log(usuarios)
+
+```
+
+</Code>
+
+---
+
+Pero casi nunca vamos a saber la posicion del elemento que queremos acceder, por eso vamos un for para recorrer los arrays y encontrar lo que buscamos. Aca podriamos ser creativos y recorrer el array de distintas formas, pero el for es de las mas usadas.
+
+<Code>
+
+
+```js
+
+let usuarios = [
+  {
+    nombre: 'Ema',
+    edad: 27,
+    habilidades: ['html, css, javascript, react']
+  },
+  {
+    nombre: 'Meison',
+    edad: 27,
+    habilidades: ['mongodb, node, express']
+  }
+]
+
+// cada array incluye la propiedad length, que nos indica la cantidad de elementos que tiene
+for (let i = 0; i < usuarios.length; i++) {
+  console.log(usuarios[i])
+}
+
+```
+
+</Code>
+
+---
+
+Para ver como usarlo en la practica, vamos a hacer un ejercicio de practica.
+
+<Code>
+
+
+```js
+
+let usuarios = [
+  {
+    nombre: 'Ema',
+    edad: 27,
+    habilidades: ['html, css, javascript, react']
+  },
+  {
+    nombre: 'Meison',
+    edad: 27,
+    habilidades: ['mongodb, node, express']
+  }
+]
+
+// dado un array de usuarios, indicar si existe un usuario llamado Lucas
+
+```
+
+</Code>
+
+---
+
+Para eliminar elementos de un array tenemos la funcion pop
+
+<Code>
+
+```js
+
+let usuarios = [
+  {
+    nombre: 'Ema',
+    edad: 27,
+    habilidades: ['html, css, javascript, react']
+  },
+  {
+    nombre: 'Meison',
+    edad: 27,
+    habilidades: ['mongodb, node, express']
+  }
+]
+
+// pop nos va a devolver el ultimo elemento del array
+let ultimoUsuario = usuarios.pop()
+console.log(ultimoUsuario)
+
+console.log(usuarios)
+
+```
+
+</Code>
+
+---
+
+### OK, entonces para que me sirve 🤔?
+
+Usamos arrays para agrupar información que vamos a querer recorrer luego. Los objetos no podemos recorrerlos, no son "iterables". Array viene con muchas funcionalidades que vamos a ver en la proxima clase.
+
+<Code>
+
+```js
+
+// Se acuerdan el ejemplo de Mirtha? Teniamos que modelar el tener alumnos de una carrera
+// Ahora que sabemos lo que son los arrays, en vez de crear diferentes objetos sueltos podriamos hacer esto
+
+let alumnos = [
+  {
+    nombre: 'Ema',
+    apellido: 'Lorenzo',
+    dni: '123456',
+    edad: 27,
+    carrera: 'Ingenieria en computacion'
+  },
+  {
+    nombre: 'Pablo',
+    apellido: 'Miceli',
+    dni: '654321',
+    edad: 27,
+    carrera: 'Ingenieria en computacion'
+  },
+  {
+    nombre: 'Meison',
+    apellido: 'Mason',
+    dni: '121212',
+    edad: 32,
+    carrera: 'Licenciatura en sistemas'
+  }
+]
+
+// ahora si nos pidieran realizar algo con estos alumnos, ya estamos listos para recorrer el array y realizar lo que sea necesario
+
+```
+
+</Code>
+
+---
+
+Ahora hacemos unos ejercicios en vivo, pero primero
+
+# Tiempo de tomar agua 🔫
+
+---
+
+Vamos a traducir todo lo que aprendimos hoy a la practica.
+
+<Code>
+
+```js
+  /* Recopilación de datos personales */
+
+  // Esta función obtiene los datos de una persona y los devuelve. (Se podría usar window.prompt para obtenerlos)
+
+  function obtenerDatosPersonales() {
+
+      // Se obtienen los datos de alguna forma
+      let nombre = "Pepe";
+      let apellido = "Pipo";
+      let edad = 99;
+      let profesion = "Programador";
+      let animeFavorito = "Evangelion";
+
+      // TODO: Devolver esta información en una estructura de datos.
+  }
+
+
+  let datosPersonales = obtenerDatosPersonales();
+
+  // Imprimir los datos obtenidos
+  console.log(datosPersonales);
+
+  // TODO: Imprimir la profesión de la persona
+  // TODO: Agregar el campo "procesado" y asignarle el valor "true" e imprimir todos los datos nuevamente.
+```
+
+</Code>
+
+---
+
+<Code>
+
+```js
+  {/* un taller mecanico tiene una lista de autos para arreglar en el dia, de cada auto sabemos:
+  * nombre del duenio
+  * valor del arreglo
+  * tiempo que tarda el arreglo (en horas)
+  * lista de repuestos necesarios
+
+  el duenio del taller quiere saber
+  1. cual es el arreglo mas caro y los repuestos que necetia
+  2. todos los arreglos para personas que se llamen `juan`
+  3. el precio total los arreglos */}
+```
+
+</Code>
+
+---
+
+Vamos con otro mas complejo
+
+<Code>
+
+```js
+// Dado un array de alumnos de Coderhood Academy, indicar quien es el que lidera el ranking de participacion en Discord
+
+let alumnos = [
+  {
+    nombre: 'MiaFate',
+    ranking: 4
+  },
+  {
+    nombre: 'Argentum',
+    ranking: 2
+  },
+  {
+    nombre: 'Lucas',
+    ranking: 1
+  },
+  {
+    nombre: 'Ema',
+    ranking: 3
+  }
+]
+```
+
+</Code>
+
+---
+
+Otro bastante complejo
+
+<Code>
+
+```js
+// Dado un array de estudiantes de una universidad, mostrar los nombres de los estudiantes de la carrera Ingenieria en computacion.
+
+let alumnos = [
+  {
+    nombre: 'Ema',
+    carrera: 'Ingenieria en computacion'
+  },
+  {
+    nombre: 'Luis',
+    carrera: 'Produccion audiovisual'
+  },
+  {
+    nombre: 'Pablo',
+    carrera: 'Ingenieria en computacion'
+  },
+  {
+    nombre: 'Meison',
+    carrera: 'Ingenieria en computacion'
+  }
+]
+```
+
+</Code>
