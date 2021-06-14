@@ -1,24 +1,135 @@
-# `git init`
+# Clase 1: `git init`
 
-### Sistema de control de versiones (VCS)
+### Tabla de contenido
 
-### ¿Qué es Git?
+1. [Sistema de control de versiones (VCS)](#Sistema-de-control-de-versiones-(VCS))
 
-### ¿Cómo usar la terminal?
+1. [¿Qué es Git?](#¿Qué-es-Git?)
 
-###  Mi primer repositorio
+1. [¿Cómo usar la terminal?](#¿Cómo-usar-la-terminal?)
+
+1. [Mi primer repositorio](#Mi-primer-repositorio)
 
 ---
 ---
 
 ## Sistema de control de versiones (VCS)
-<!-- TODO:  -->
+
+---
+
+### Version control system (VCS)
+
+Es un programa o herramienta que nos permite getionar los cambios que suceden en un proyecto a lo largo del tiempo, crea una "historia" del proyecto
+
+Los cambios pueden ser:
+  * agregar un archivo
+  * eliminar un archivo
+  * editar un archivo (modificar el codigo fuente de nuestro proyecto)
+  * agregar una carpeta
+
+Tambien guarda quien es el autor de los cambios, la fecha
+
+---
+
+### ¿Por qué usar un VCS?
+
+supongamos que arrancamos un proyecto y hasta ahora tenemos lso siguientes archivos:
+
+```
+Documentos
+└── proyecto
+    ├── ejercicio1.js
+    ├── ejercicio2.js
+    ├── informe.pdf
+    ├── informe.doc
+    └── practica.pdf
+```
+
+---
+
+Luego se nos ocurre una mejor manera de hacer el ejercicio2, pero como el que tenemos ya anda, no queremos perderlo...
+
+```
+Documentos
+└── proyecto
+    ├── ejercicio1.js
+    ├── ejercicio2.js
+    ├── ejercicio2_nuevo.js
+    ├── informe.pdf
+    ├── informe.doc
+    └── practica.pdf
+```
+
+---
+
+Más tarde le pedimos a un amigo que revise el informe y nos lo devuleve con cambios...
+
+```
+Documentos
+└── proyecto
+    ├── ejercicio1.js
+    ├── ejercicio2.js
+    ├── ejercicio2_nuevo.js
+    ├── informe.pdf
+    ├── informe.doc
+    └── informe_de_ema.doc
+```
+
+---
+
+con el tiempo y sin darnos cuenta nuestro proyecto quedo asi ☠️
+
+```
+Documentos
+└── proyecto
+    ├── ejercicio1.js
+    ├── ejercicio2.js
+    ├── ejercicio2_nuevo.js
+    ├── ejercicio2_final.js
+    ├── ejercicio3_NO_FUNCIONA.js
+    ├── ejercicio3_de_pablo.js
+    ├── informe.pdf
+    ├── informe.doc
+    ├── informe_de_ema.doc
+    ├── informe_final.doc
+    ├── informe_final2.doc
+    └── informe_final_corrgido.doc
+```
+
+---
+
+Y peor todavia, podemos copiar la carpeta y nunca mas encontrar cual era la que teniamos que entregar 🤯
+
+```
+Documentos
+├── proyecto
+│   ├── ejercicio1.js
+│   ├── ...
+│   └── informe.doc
+├── proyecto_corregido
+│   ├── ejercicio1_ANDA.js
+│   ├── ...
+│   └── informe_final.doc
+└── proyecto_final
+    ├── ejercicio1.js
+    ├── ...
+    └── informe_final_final_B.doc
+```
+
+---
+
+### Solucion 
+
+#### Sitemas de control de versiones 💜
+1. estan para evitar duplicar informacion lo mas posible
+2. getionar los cambios en el proyecto de forma mas inteligente
+3. facilitar el trabajo en equipo en un mismo proyecto y hasta en un mismo archivo
 
 ---
 
 ## ¿Qué es Git?
-<!-- TODO:  -->
 
+> Es un sistema de control de veriones 😛
 
 ---
 
@@ -138,8 +249,9 @@ es la direccion a un archivo o carpeta desde otra carpeta
 
 > #### Info 💡
 >
-> - carpeta `.`: es la carpeta actual, donde estamos ahora, podemos ver cual es con `pwd`
-> - carpeta `..`: es la carpeta que contiene a la actual, si hacemos `cd ..` nos envia a la carpeta previa
+> - path `.`: es la carpeta actual, donde estamos ahora, podemos ver cual es con `pwd`
+> - path `..`: es la carpeta que contiene a la actual, si hacemos `cd ..` nos envia a la carpeta previa
+> - path `~`: es la carpeta de nuestro usuario, `cd ~` nos envia a la carpeta esa
 
 ---
 
@@ -150,6 +262,7 @@ es la direccion a un archivo o carpeta desde otra carpeta
   - `mkdir nueva_carpeta`: crea un directorio o carpeta llamado `nueva_carpeta`
 
 - `cp <origen> <destino>`: (copy) crea una copia de un archivo
+
   - `cp archivo_original archivo_copia`: copia el archivo llamado `archivo_original` creando uno nuevo llamado `archivo_copia`
 
 ---
@@ -356,6 +469,16 @@ Untracked files:
 > 
 > esta para que se entienda que se ejecutan de a uno a la vez
 ---
+### Mas formas de usar `git add`
+<!-- TODO:  -->
+
+```
+git add .
+git add <carpeta>
+git add <archivo_1> <archibo_2>
+```
+
+---
 
 ### Mi primer commit
 
@@ -365,9 +488,15 @@ Llego el momento de crear el primer commit con los cambios ya preparados!
 $ git commit -m "Primer commit de mi primer repo :D"
 ```
 
-Se creo un commit con el mensaje `Primer commit de mi primer repo :D`
-<!-- TODO:  -->
+Asi creamos un commit con el mensaje `Primer commit de mi primer repo :D`
 
+> ℹ️ Info:
+>
+> 1. Si no agregamos el flag `-m` para definir el mensaje desde el comando, git nos va a abrir el editor que tengamos configurardo por defecto (vim, nano, code, etc).
+>
+> 1. Git se va a quedar esperando a que guardemos y cerremos el archivos del mensaje.
+>
+> 1. Si no agregasmo un mensaje la creacion del commit se va a abrotar!
 
 ---
 
@@ -400,13 +529,13 @@ $ git push -u origin main
 ---
 
 ### git clone
+<!-- TODO:  -->
 
 La segunda forma de crear un repocitorio 😸
 
 ```
 $ git clone <repo_url>
 ```
-<!-- TODO:  -->
 
 ### Ultimo comando
 
