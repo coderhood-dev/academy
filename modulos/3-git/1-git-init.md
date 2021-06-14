@@ -9,6 +9,7 @@
 ## Mi primer repositorio
 
 ---
+---
 
 ## Sistema de control de versiones (VCS)
 
@@ -20,7 +21,7 @@
 
 ### Git git git git
 
-Es un programa,software, etc 
+Es un programa,software, etc
 
 ---
 
@@ -32,7 +33,7 @@ Es un programa,software, etc
 
 linea de comandos (CLI), consola, terminal o _shell_ es una interfaz para comuncarnos con la computadora ejecutando programas
 
-![CLI, GUI, NUI, evolución de interfaces de usuario](./CLI-GUI-NUI,_evolución_de_interfaces_de_usuario.png)
+![CLI, GUI, NUI, evolución de interfaces de usuario](./CLI-GUI-NUI_evolución_de_interfaces_de_usuario.png)
 
 1. CLI: intefaz de linea de comando, o Command Line Interface
 1. GUI: integaz grafica de usuario, o Graphic User Interface
@@ -65,7 +66,7 @@ Hay que instalar **bash** en el OS ([Operating system](https://es.wikipedia.org/
   2. la cosa se pone rara, pero hay que hacer scroll a la parte de `Assets`
   3. descargar el intalador `Git-2.31.1-32-bit.exe` o `PortableGit-2.31.1-32-bit.7z.exe`
 
-- [Cmder](https://cmder.net/) Una mejor copcion y mi recomendada 😝
+- [Cmder](https://cmder.net/) Una mejor copcion y mi recomendada ✨
   1. hacer scroll
   2. boton `Download Full` que dice `(with Git for Windows)`
 
@@ -138,15 +139,21 @@ es la direccion a un archivo o carpeta desde otra carpeta
 
 ---
 
-### Más comandos (o programas) 🤯
+### Más comandos
 
 - `mkdir`: (make directory) crea un nuevo directorio
+
   - `mkdir nueva_carpeta`: crea un directorio o carpeta llamado `nueva_carpeta`
 
 - `cp <origen> <destino>`: (copy) crea una copia de un archivo
   - `cp archivo_original archivo_copia`: copia el archivo llamado `archivo_original` creando uno nuevo llamado `archivo_copia`
 
+---
+
+### Más comandos (o programas) 🤯
+
 - `mv <origen> <destino>`: (move) mueve un archivo, tambien se usa para renombrar un archivo
+
   - `mv Downloads\archivo.txt Documents\repos\info.txt`: mueve el archivo `archivo.txt` ubuncado en `Downloads` a la carpeta `Documents\repos\` cambiandole el nombre a `info.txt`
 
 - `rm <archivo>`: (remove) elimina un archivo o carpeta si se usa el flag `-r` de recursión
@@ -157,14 +164,317 @@ es la direccion a un archivo o carpeta desde otra carpeta
 
 ## Mi primer repositorio
 
+#### Recordemos
+
+Un repocitorio es una carpeta (con archivos y subcarpetas dentro) controlada por git para getionar los cambios y el historial de su contenido. Hay dos formas de crear un repocitorio.
+
+Vamos a
+
+1. crear una carpeta
+
+```
+mkdir mi-repocitorio
+```
+
+2. nos metemos adentro
+
+```
+cd mi-repocitorio
+```
+
+3. vamos convertirla en un repocitorio usando git
+
+```
+git init
+```
+
+🎉 🎉 🎋
+
 ---
 
-### Crear un repocitorio
+### Un nuevo mejor amigo `git status`
 
-   <!-- git init, status, add, commit, remote add, clone, push  -->
+Este comando lo vamos a usar todo el tiempo, nos va a mostrar el estado actual del repocitorio
+
+```
+git status
+```
+
+nos va a devolver algo como esto
+
+```
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+```
+
+dice que estoy en la rama *master*, todavia no hay commits y no hay nada para commitear.
+
+> #### Info:
+>
+> siempre lean lo que devuelven los comandos, suelen venir con consejos de como continuar 😉
 
 ---
 
-_[Clase siguiente](clase2.gitRemote.md)_
+### Nuevos cambios
 
-_[Volver al listado de clases](../git.md)_
+Vamso a crear algunos archivos (`README.md` y `script.js`) en el repo para luego agregarlos a la historia de git.
+
+Ahora si hago `ls` en al carpeta del repo, me va a mostrar los archivos recien creados
+
+```
+README.md  script.js
+```
+
+pero `git status` no va a mostar como git ve al repo
+
+```
+$ git status
+```
+> 💥 el `$` no va en la consola
+
+---
+### git status
+
+`$ git status` no va a mostar como git ve al repo
+> 💥 el `$` no va en la consola
+
+
+```
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	README.md
+	script.js
+
+nothing added to commit but untracked files present (use "git add" to track)
+```
+
+dice que estoy en la rama *master*, todavia no hay commits, 
+
+**hay 2 archivos sin trackear** y no hay nada agregado para commitear.
+
+Usar `git add` para tracker 🤔
+
+---
+
+### git add
+
+_recordar working_directory_
+
+**hay 2 archivos sin rastrear!**
+
+`git add <file>...` va a preparar nuestros archivos para ser incluido en el proximo commit
+
+voy a _stagear_ el archivo `README.md`
+```
+$ git add README.md
+```
+
+ahora los cambios que tenemos en el archivo estan preparados para entrar en el proximo paquete.
+
+---
+### Como vamos?
+
+```
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	script.js
+```
+dice que estoy en la rama *master*, todavia no hay commits, 
+
+**hay 1 _cambio_ para commitear** y 1 archivo sin trackear.
+
+---
+### Nuevos cambios
+
+Ahora edito/cambio el archivo `README.md` y vuelvo a ejecutar `git status`
+
+```
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   README.md
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	script.js
+```
+En `README.md` hay _cambios_ preparados (staged) para el proximo commit y cambios que no estan staged (preparados).
+
+---
+
+Para incluir los nuevo cambios usamos `git add README.md` otra vez
+
+```
+$ git add README.md
+$ git status 
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	script.js
+```
+
+> 💥 el `$` al pricipio de los comando no va en la consola
+> 
+> esta para que se entienda que se ejecutan de a uno a la vez
+---
+
+### Mi primer commit
+
+Llego el momento de crear el primer commit con los cambios ya preparados!
+
+```
+git commit -m "Primer commit de mi primer repo :D"
+```
+
+Se creo un commit con el mensaje `Primer commit de mi primer repo :D`
+
+
+---
+
+### git remote add
+
+```
+git remote add <repo_url>
+```
+
+```
+git remote add origin git@github.com:tomasdisk/test-1.git
+```
+
+```
+git branch -M main
+```
+
+---
+
+### git push
+
+```
+git push -u origin main
+```
+
+> solo va a funcionar si tenemos permisos de escritura para el repo
+
+---
+
+### git clone
+
+La segunda forma de crear un repocitorio 😸
+
+```
+git clone <repo_url>
+```
+
+### Ultimo comando
+
+```
+git log
+```
+
+> salir apretando `q`
+---
+
+### Ejercicios
+
+#### 1. Primer repo
+* Crear un repo
+* agregar y editar varios archivos
+* preparatlos (_stagearlos_)
+* crear el primer commit
+
+#### 2. Github
+* Crearse una cuenta en github
+* crear un repo en github
+* publicar el repo del ejercicio 1
+
+#### 3. Clonar
+* clonar su propio repo (o el de alguien mas)
+* hacer cambios
+* publicar los nuevos commits
+
+---
+
+### Resumen
+
+Todos los comando usados en la clase ✨
+
+> 💥 el `$` al pricipio de los comando no va en la consola
+> 
+> esta para que se entienda que se ejecutan de a uno a la vez
+
+### crear el repo
+```
+$ mkdir mi-repo
+$ cd mi-repo
+$ git init
+$ git status
+```
+#### crear los archivos `README.md` y `script.js` usando el comando `echo`
+```
+$ echo "# Hola" > README.md
+$ echo "const saludo = 'Hola mundo'; console.log(saludo);" > script.js
+$ ls
+$ git status
+```
+#### preperar lso cambios para el proximo commit
+```
+$ git add README.md
+$ git status
+```
+#### editar `README.md` y volver a preperar los cambios
+```
+$ cat README.md
+$ echo "# Hola mi repo" > README.md
+$ git status
+$ git add README.md
+$ git status
+```
+#### crear primer commit
+```
+$ git commit -m "Primer commit de mi primer repo: D"
+$ git status
+```
+#### agregar _origin_ como repocitorio remoto y cambiar la rama __default__ de _master_ a _main_
+```
+$ git remote add origin https://github.com/tomasdisk/test-1.git
+$ git branch -M main
+$ git status
+```
+#### publicar los commits creados
+```
+$ git push -u origin main
+$ git status
+```
