@@ -1,27 +1,31 @@
 # `git init`
 
+### Sistema de control de versiones (VCS)
+
+### ¿Qué es Git?
+
+### ¿Cómo usar la terminal?
+
+###  Mi primer repositorio
+
+---
+---
+
 ## Sistema de control de versiones (VCS)
+<!-- TODO:  -->
+
+---
 
 ## ¿Qué es Git?
+<!-- TODO:  -->
 
-## [¿Cómo usar la terminal?](#Terminal)
-
-## Mi primer repositorio
-
----
----
-
-## Sistema de control de versiones (VCS)
-
----
-
-## ¿Qué es Git?
 
 ---
 
 ### Git git git git
 
 Es un programa,software, etc
+<!-- TODO:  -->
 
 ---
 
@@ -234,11 +238,13 @@ pero `git status` no va a mostar como git ve al repo
 $ git status
 ```
 > 💥 el `$` no va en la consola
+>
+> esta para diferenciar un comando de su respuesta
 
 ---
 ### git status
 
-`$ git status` no va a mostar como git ve al repo
+`git status` no va a mostar como git ve al repo
 > 💥 el `$` no va en la consola
 
 
@@ -356,34 +362,37 @@ Untracked files:
 Llego el momento de crear el primer commit con los cambios ya preparados!
 
 ```
-git commit -m "Primer commit de mi primer repo :D"
+$ git commit -m "Primer commit de mi primer repo :D"
 ```
 
 Se creo un commit con el mensaje `Primer commit de mi primer repo :D`
+<!-- TODO:  -->
 
 
 ---
 
 ### git remote add
+<!-- TODO:  -->
 
 ```
-git remote add <repo_url>
-```
-
-```
-git remote add origin git@github.com:tomasdisk/test-1.git
+$ git remote add <repo_url>
 ```
 
 ```
-git branch -M main
+$ git remote add origin git@github.com:tomasdisk/test-1.git
+```
+
+```
+$ git branch -M main
 ```
 
 ---
 
 ### git push
+<!-- TODO:  -->
 
 ```
-git push -u origin main
+$ git push -u origin main
 ```
 
 > solo va a funcionar si tenemos permisos de escritura para el repo
@@ -395,14 +404,16 @@ git push -u origin main
 La segunda forma de crear un repocitorio 😸
 
 ```
-git clone <repo_url>
+$ git clone <repo_url>
 ```
+<!-- TODO:  -->
 
 ### Ultimo comando
 
 ```
-git log
+$ git log
 ```
+<!-- TODO:  -->
 
 > salir apretando `q`
 ---
@@ -431,7 +442,7 @@ git log
 
 Todos los comando usados en la clase ✨
 
-> 💥 el `$` al pricipio de los comando no va en la consola
+> 💥 el `$` al pricipio de los comando no va en la consola,
 > 
 > esta para que se entienda que se ejecutan de a uno a la vez
 
