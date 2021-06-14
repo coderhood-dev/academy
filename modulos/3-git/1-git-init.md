@@ -136,7 +136,8 @@ Documentos
 ### Git git git git
 
 Es un programa,software, etc
-<!-- TODO:  -->
+
+TODO: aca falta un explciacion general de como funciona git
 
 ---
 
@@ -470,7 +471,7 @@ Untracked files:
 > esta para que se entienda que se ejecutan de a uno a la vez
 ---
 ### Mas formas de usar `git add`
-<!-- TODO:  -->
+TODO: explicacion 
 
 ```
 git add .
@@ -501,7 +502,7 @@ Asi creamos un commit con el mensaje `Primer commit de mi primer repo :D`
 ---
 
 ### git remote add
-<!-- TODO:  -->
+TODO: explicacion 
 
 ```
 $ git remote add <repo_url>
@@ -518,7 +519,7 @@ $ git branch -M main
 ---
 
 ### git push
-<!-- TODO:  -->
+TODO: explicacion 
 
 ```
 $ git push -u origin main
@@ -529,7 +530,7 @@ $ git push -u origin main
 ---
 
 ### git clone
-<!-- TODO:  -->
+TODO: explicacion 
 
 La segunda forma de crear un repocitorio 😸
 
@@ -542,7 +543,7 @@ $ git clone <repo_url>
 ```
 $ git log
 ```
-<!-- TODO:  -->
+TODO: explicacion 
 
 > salir apretando `q`
 ---
