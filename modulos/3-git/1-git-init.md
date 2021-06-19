@@ -125,7 +125,7 @@ Documentos
 #### Sitemas de control de versiones 💜
 
 1. estan para evitar duplicar informacion lo mas posible
-2. getionar los cambios en el proyecto de forma mas inteligente
+2. gestionar los cambios en el proyecto de forma mas inteligente
 3. facilitar el trabajo en equipo en un mismo proyecto y hasta en un mismo archivo
 
 ---
