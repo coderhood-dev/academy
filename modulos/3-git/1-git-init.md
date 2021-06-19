@@ -2,7 +2,7 @@
 
 ### Tabla de contenido
 
-1. [Sistema de control de versiones (VCS)](#Sistema-de-control-de-versiones-(VCS))
+1. [Sistema de control de versiones (VCS)](<#Sistema-de-control-de-versiones-(VCS)>)
 
 1. [¿Qué es Git?](#¿Qué-es-Git?)
 
@@ -11,6 +11,7 @@
 1. [Mi primer repositorio](#Mi-primer-repositorio)
 
 ---
+
 ---
 
 ## Sistema de control de versiones (VCS)
@@ -22,10 +23,11 @@
 Es un programa o herramienta que nos permite getionar los cambios que suceden en un proyecto a lo largo del tiempo, crea una "historia" del proyecto
 
 Los cambios pueden ser:
-  * agregar un archivo
-  * eliminar un archivo
-  * editar un archivo (modificar el codigo fuente de nuestro proyecto)
-  * agregar una carpeta
+
+- agregar un archivo
+- eliminar un archivo
+- editar un archivo (modificar el codigo fuente de nuestro proyecto)
+- agregar una carpeta
 
 Tambien guarda quien es el autor de los cambios, la fecha
 
@@ -118,9 +120,10 @@ Documentos
 
 ---
 
-### Solucion 
+### Solucion
 
 #### Sitemas de control de versiones 💜
+
 1. estan para evitar duplicar informacion lo mas posible
 2. getionar los cambios en el proyecto de forma mas inteligente
 3. facilitar el trabajo en equipo en un mismo proyecto y hasta en un mismo archivo
@@ -149,7 +152,7 @@ TODO: aca falta un explciacion general de como funciona git
 
 linea de comandos (CLI), consola, terminal o _shell_ es una interfaz para comuncarnos con la computadora ejecutando programas
 
-![CLI, GUI, NUI, evolución de interfaces de usuario](./CLI-GUI-NUI_evolución_de_interfaces_de_usuario.png)
+![CLI, GUI, NUI, evolución de interfaces de usuario](./CLI-GUI-NUI_evolucion_de_interfaces_de_usuario.png)
 
 1. CLI: intefaz de linea de comando, o Command Line Interface
 1. GUI: integaz grafica de usuario, o Graphic User Interface
@@ -328,7 +331,7 @@ No commits yet
 nothing to commit (create/copy files and use "git add" to track)
 ```
 
-dice que estoy en la rama *master*, todavia no hay commits y no hay nada para commitear.
+dice que estoy en la rama _master_, todavia no hay commits y no hay nada para commitear.
 
 > #### Info:
 >
@@ -351,16 +354,18 @@ pero `git status` no va a mostar como git ve al repo
 ```
 $ git status
 ```
+
 > 💥 el `$` no va en la consola
 >
 > esta para diferenciar un comando de su respuesta
 
 ---
+
 ### git status
 
 `git status` no va a mostar como git ve al repo
-> 💥 el `$` no va en la consola
 
+> 💥 el `$` no va en la consola
 
 ```
 $ git status
@@ -376,7 +381,7 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 ```
 
-dice que estoy en la rama *master*, todavia no hay commits, 
+dice que estoy en la rama _master_, todavia no hay commits,
 
 **hay 2 archivos sin trackear** y no hay nada agregado para commitear.
 
@@ -393,6 +398,7 @@ _recordar working_directory_
 `git add <file>...` va a preparar nuestros archivos para ser incluido en el proximo commit
 
 voy a _stagear_ el archivo `README.md`
+
 ```
 $ git add README.md
 ```
@@ -400,6 +406,7 @@ $ git add README.md
 ahora los cambios que tenemos en el archivo estan preparados para entrar en el proximo paquete.
 
 ---
+
 ### Como vamos?
 
 ```
@@ -416,11 +423,13 @@ Untracked files:
   (use "git add <file>..." to include in what will be committed)
 	script.js
 ```
-dice que estoy en la rama *master*, todavia no hay commits, 
+
+dice que estoy en la rama _master_, todavia no hay commits,
 
 **hay 1 _cambio_ para commitear** y 1 archivo sin trackear.
 
 ---
+
 ### Nuevos cambios
 
 Ahora edito/cambio el archivo `README.md` y vuelvo a ejecutar `git status`
@@ -444,6 +453,7 @@ Untracked files:
   (use "git add <file>..." to include in what will be committed)
 	script.js
 ```
+
 En `README.md` hay _cambios_ preparados (staged) para el proximo commit y cambios que no estan staged (preparados).
 
 ---
@@ -452,7 +462,7 @@ Para incluir los nuevo cambios usamos `git add README.md` otra vez
 
 ```
 $ git add README.md
-$ git status 
+$ git status
 On branch master
 
 No commits yet
@@ -467,17 +477,22 @@ Untracked files:
 ```
 
 > 💥 el `$` al pricipio de los comando no va en la consola
-> 
+>
 > esta para que se entienda que se ejecutan de a uno a la vez
+
 ---
+
 ### Mas formas de usar `git add`
-TODO: explicacion 
+
+Con `add` podemos preparar para el proximo _commit_ de a carpetas enteras o de a varios archivos a la vez.
 
 ```
 git add .
 git add <carpeta>
 git add <archivo_1> <archibo_2>
 ```
+
+> Con `.` estamos agregando la carpeta donde estemos pocicionados en la consola.
 
 ---
 
@@ -502,69 +517,102 @@ Asi creamos un commit con el mensaje `Primer commit de mi primer repo :D`
 ---
 
 ### git remote add
-TODO: explicacion 
+
+Usando el comando `remote` conectamos nuestro repo con un repocitorio remoto desde donde podemos traer o enviar cambios (_commits_) del proyecto.
 
 ```
-$ git remote add <repo_url>
+$ git remote add <nombre> <repo_url>
 ```
+
+El nombre que se usa por defecto es _origin_.
 
 ```
 $ git remote add origin git@github.com:tomasdisk/test-1.git
 ```
-
+Lo siguiente cambia el nombre de la rama principal a `main`, antes de eso se llamaba `master`.
 ```
 $ git branch -M main
 ```
+> 🤔 Por ahora solo es necesario saber que existe una rama principal llamada _master_, pero este nombre puede ser cambaiado.
+>
+> La proxima clase veremos com usar las _ramas_ de git. 🔀
 
 ---
 
 ### git push
-TODO: explicacion 
+
+Para publicar nuestros commits (paquetes de cambios) usamso `git push`, todos los cambiso que no esten dentro de un commit no son publicados.
+
+```
+git push <remote> <branch>
+```
+
+A nuestro remote le pusimos el nombre `origin` cuando usamos el comando `git add remote` y nuestra rama, que antes se llamaba `master`, le cambiamos el nombre a `main`.
+
+Por lo tanto
 
 ```
 $ git push -u origin main
 ```
 
-> solo va a funcionar si tenemos permisos de escritura para el repo
+El flag `-u` solo va a ser necesaio pa primera vez, es para que git entienda que nuestra rama local `main` hace referencia a la _rama_ `main` del _remote_ `origin`.
+
+Con esto, la sengunda vez podemos hacer solo `git push` y git ya sabe a que _rama_ y _remote_ enviar nuestros commits.
+
+> 🔒 Solo va a funcionar si tenemos permisos de escritura para el repo
 
 ---
 
 ### git clone
-TODO: explicacion 
 
 La segunda forma de crear un repocitorio 😸
 
 ```
 $ git clone <repo_url>
+$ git clone https://github.com/coderhood-dev/coderhood.dev.git
 ```
+
+Este comando nos va a crear una carpeta llamada `coderhood.dev` y dentro va a descargar toda la info del _repocitorio remoto_
+
+---
 
 ### Ultimo comando
 
 ```
 $ git log
 ```
-TODO: explicacion 
 
-> salir apretando `q`
+Se lo usa para obtener informacion de la historia de commits del repo.
+
+```
+git log --oneline
+git log --stat
+```
+
+> se sale del log apretando `q`
+
 ---
 
 ### Ejercicios
 
 #### 1. Primer repo
-* Crear un repo
-* agregar y editar varios archivos
-* preparatlos (_stagearlos_)
-* crear el primer commit
+
+- Crear un repo
+- agregar y editar varios archivos
+- preparatlos (_stagearlos_)
+- crear el primer commit
 
 #### 2. Github
-* Crearse una cuenta en github
-* crear un repo en github
-* publicar el repo del ejercicio 1
+
+- Crearse una cuenta en github
+- crear un repo en github
+- publicar el repo del ejercicio 1
 
 #### 3. Clonar
-* clonar su propio repo (o el de alguien mas)
-* hacer cambios
-* publicar los nuevos commits
+
+- clonar su propio repo (o el de alguien mas)
+- hacer cambios
+- publicar los nuevos commits
 
 ---
 
@@ -573,29 +621,36 @@ TODO: explicacion
 Todos los comando usados en la clase ✨
 
 > 💥 el `$` al pricipio de los comando no va en la consola,
-> 
+>
 > esta para que se entienda que se ejecutan de a uno a la vez
 
 ### crear el repo
+
 ```
 $ mkdir mi-repo
 $ cd mi-repo
 $ git init
 $ git status
 ```
+
 #### crear los archivos `README.md` y `script.js` usando el comando `echo`
+
 ```
 $ echo "# Hola" > README.md
 $ echo "const saludo = 'Hola mundo'; console.log(saludo);" > script.js
 $ ls
 $ git status
 ```
+
 #### preperar lso cambios para el proximo commit
+
 ```
 $ git add README.md
 $ git status
 ```
+
 #### editar `README.md` y volver a preperar los cambios
+
 ```
 $ cat README.md
 $ echo "# Hola mi repo" > README.md
@@ -603,18 +658,24 @@ $ git status
 $ git add README.md
 $ git status
 ```
+
 #### crear primer commit
+
 ```
 $ git commit -m "Primer commit de mi primer repo: D"
 $ git status
 ```
-#### agregar _origin_ como repocitorio remoto y cambiar la rama __default__ de _master_ a _main_
+
+#### agregar _origin_ como repocitorio remoto y cambiar la rama **default** de _master_ a _main_
+
 ```
 $ git remote add origin https://github.com/tomasdisk/test-1.git
 $ git branch -M main
 $ git status
 ```
+
 #### publicar los commits creados
+
 ```
 $ git push -u origin main
 $ git status
