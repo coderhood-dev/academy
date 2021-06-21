@@ -12,8 +12,6 @@
 
 ---
 
----
-
 ## Sistema de control de versiones (VCS)
 
 ---
@@ -138,12 +136,41 @@ Documentos
 
 ### Git git git git
 
-Es un programa,software, etc
+En git, a un proyecto lo llamamos _repocitorio_ y es una carpeta que contiene todos los archivos y otras carpetas del proyecto.
 
-TODO: aca falta un explciacion general de como funciona git
+Git se encarga de rastrear (track) y controlar el historial de todos los archivos dentro del _repocitorio_.
+
+Los archivos pueden estar en tres estados distintos:
+  * confirmado (committed)
+  * modificado (modified)
+  * preparado (staged)
 
 ---
 
+### Los tres estados
+
+**Confirmado (committed)**: 
+* significa que los archivos están almacenados de manera segura en el repocitorio.
+
+**Modificado (modified)**:
+* significa que has modificado el archivo pero todavía no fue confirmado.
+
+**Preparado (staged)**:
+*  significa que has marcado un archivo modificado en su _versión actual_ para que entre en la próxima confirmación.
+
+---
+
+### Paquetes de modificaciones
+
+Los _commits_ con son una parte fundamental de git.
+
+La historia del repocitorio esta conformada por una cadena de _commits_, es decir, una cadena de paquetes de modificaciones.
+
+![Cadena de commits](./basic-branching-1.png)
+
+> La rama `master` tiene una historia con 3 _commits_.
+
+---
 ## ¿Cómo usar la terminal?
 
 ---
@@ -515,6 +542,11 @@ Asi creamos un commit con el mensaje `Primer commit de mi primer repo :D`
 > 1. Si no agregasmo un mensaje la creacion del commit se va a abrotar!
 
 ---
+### Ciclo de vide de un rachivo 🌟
+
+![Ciclo de vida](./lifecycle.png)
+
+---
 
 ### git remote add
 
@@ -559,7 +591,7 @@ El flag `-u` solo va a ser necesaio pa primera vez, es para que git entienda que
 
 Con esto, la sengunda vez podemos hacer solo `git push` y git ya sabe a que _rama_ y _remote_ enviar nuestros commits.
 
-> 🔒 Solo va a funcionar si tenemos permisos de escritura para el repo
+> 🔒 Nos va a pedir usuario y contraseña, solo va a funcionar si tenemos permisos de escritura para el repo
 
 ---
 
@@ -680,3 +712,11 @@ $ git status
 $ git push -u origin main
 $ git status
 ```
+
+---
+
+### Bibliografia
+
+### 1. [Pro Git, Capitulo 1: Inicio - Sobre el Control de Versiones](https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Acerca-del-Control-de-Versiones)
+
+### 2. [Pro Git, Capitulo 2: Fundamentos de Git](https://git-scm.com/book/es/v2/Fundamentos-de-Git-Obteniendo-un-repositorio-Git)
