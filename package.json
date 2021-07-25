@@ -12,7 +12,9 @@
     "clase-3": "mdx-deck modulos/1-fundamentos-de-programación/3-modularizacion-y-funciones.mdx",
     "clase-4": "mdx-deck modulos/1-fundamentos-de-programación/4-estructuras-de-datos.mdx",
     "build": "mdx-deck build modulos/0-introducción/1-como-funciona-el-internet.mdx",
-    "build-pdf": "npx website-pdf http://localhost:8000/print -o modulos/1-fundamentos-de-programación/4-estructuras-de-datos.pdf"
+    "build-pdf": "npx website-pdf http://localhost:8000/print -o modulos/1-fundamentos-de-programación/4-estructuras-de-datos.pdf",
+    "clase-2-css": "mdx-deck modulos/2-diseño-web/2-css.mdx",
+    "clase-3-css": "mdx-deck modulos/2-diseño-web/3-css.mdx"
   },
   "dependencies": {
     "mdx-code": "2.0.0"
