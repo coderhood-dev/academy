@@ -1,0 +1,163 @@
+import { themes, Image } from 'mdx-deck'
+import cookiesAlgoritm from '../../assets/cookies-algoritm.png'
+import memoryScheme from '../../assets/memory-scheme.png'
+
+export const theme = themes.book
+
+# Introduccion a CSS
+
+* Bautista Di Santo
+
+---
+
+## CSS - clase 1: intro a css, sintaxis, box model, default styles
+* intro, qué es  cascading style sheet?.
+* composición de una regla en css
+* cómo aplicar css, estilos en línea o externos, sintaxis: clases e id.
+* especificidad (jerarquía de selectores).
+* modelo de caja.
+* block e inline elements
+* flexbox
+* Extras
+
+---
+
+## ¿Qué es  cascading style sheet?
+* CSS es un lenguaje usado para cear interfazes a partir de un documento escrito en markup.
+* CSS describe como los elementos de html (tags) se van a mostrar en nuestra pagina y controla el layout de nuestras html tags.
+* Sirve para estilizar nuestra pagina y hacer interfazes mas amigables para los usuarios que van a consumir el producto final.
+
+---
+
+# SIRVE PARA HACER CAJITAS
+
+---
+
+# composición de una regla en css
+
+Una regla de CSS esta compuesta por los siguientes elementos: un selector y una declaracion => una propiedad y su valor.
+
+<Steps>
+
+* selector { propiedad: valor; }
+* p { color: red; } 
+* /[[*]] esto es un comentario [[*]]/
+
+</Steps>
+
+---
+
+## Aplicando CSS
+
+hay tres formas dieferentes de aplicar CSS, estilos en linea, estilos internos y estilos externos
+
+* En linea: 
+simplemente declaramos nuestra regla adentro de una propiedad que se le puede dar a nuestra etiqueta HTML <!-- <p style="color:red;"> esto es texto simple </p> -->
+* Internos: 
+al final de nuestro documento html podemos hacer un apartado abriendo las etiquetas <!-- <style></style> -->, dentro de estas escribimos nuestras reglas.
+* Externos: podemos crear un archivo .css, e importarlo a nuestro html con la etiqueta <!-- link --> 
+
+---
+
+## Selectores simples
+
+Los elementos HTML pueden ser seleccionados por medio de: 
+
+* Etiqueta
+* ID 
+* Clase
+
+---
+
+## especificidad (jerarquía de selectores).
+
+A veces una etiqueta html puede tener varios selectores al mismo tiempo y sus diferentes reglas pueden compartir 
+las mismas propiedades. Cuando pasa esto el motor de renderizado debe decidir a cual de los 
+selectores hacerle caso para mostrar nuestros elemento en pantalla, esto lo soluciona organizando las 
+reglas por jerarquia, y esta se maneja de la siguiente forma:
+
+* ID
+* Clases
+* Tag
+
+---
+
+## colores en CSS
+ 
+ los color en CSS se puede aplicar de las siguientes formas: RGB (red, green, blue), HEX (hexadecimal), HSL (hue, saturation, lightness), RGBA (alpha), HSLA (alpha)
+
+* con color podemos cambiar calbiar el color del texto
+* con background color podemos cambiar el color del fondo
+* con border podemos darle bordes a los elementos y cambiar su grosor estilo y color
+
+---
+
+## Box model
+
+el modelo de caja es una herramienta que nos permite espaciar nuestro contenido en una caja compuesta por:
+* margin (el espacio separando la caja de los otros elementos)
+* padding (el espacio entre el borde de la caja y el contenido)
+* border (el borde)
+    -border, border radius
+* content (uwu)
+* width & height
+    medidas fijas, y fit-content
+
+---
+
+## Block and inline elements
+
+* Elementos block-level: siempre se aplilan en columna, toman el ancho de la pagina.
+* Elementos inline: se apilan uno al lado del otro, toman el ancho y altura de su contenido. 
+
+---
+
+## Flexbox
+
+* Para empezar a usar flexbox tenemos que definir un contenedor flexible con la propiedad: 
+    -display: flex
+* Flex-direction define para que direccion se van a acomodar nuestros items
+    -row, column, row-reverse, column-reverse
+* Flex-wrap sirve para que nuestro contenedor acomode los items que tiene dentro si exeden el ancho o altura de este
+    -display: flex-wrap
+* Flex-flow mezcla las dos propiedades de la siguiente forma en el valor de este se indica la direccion y el comportamiento ej: 
+    -flex-flow: row-wrap 
+
+---
+
+## Justify-content
+
+Justify-content alinea los items en el eje vertical
+
+<Steps>
+
+* flex-end envia los objetos al final del contenedor 
+* flex-start los pone al principio
+* flex-center los centra
+
+</Steps>
+
+---
+
+## Align-items
+
+Align-items alinea los items en el eje horizontal
+
+* flex-end envia los objetos al final del contenedor 
+* flex-start los pone al principio
+* flex-center los centra
+
+---
+
+## Cosas extra.
+
+* Agregando fuentes
+* Inline-block al usar esta propiedad podemos darle ancho, alto, margin top/bottom, padding top/bottom a nuestro elemento, a su vez esto hace que que nuestro elemento pueda aparecer al lado de otros y se apile como lo haria un elemento block-level  
+* Acostumbrarse a usar el inspector de elementos
+* Todos los elementos de html tienen estilos por default, esto puede variar dependiendo del browser: https://browserdefaultstyles.com
+* https://w3schools.com/css/default.asp
+
+---
+
+# CHAU
+

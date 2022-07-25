@@ -1,0 +1,88 @@
+import { themes, Image } from 'mdx-deck'
+import cookiesAlgoritm from '../../assets/cookies-algoritm.png'
+import memoryScheme from '../../assets/memory-scheme.png'
+
+export const theme = themes.book
+
+# CSS Media queries y pseudo selectores
+
+- Bautista Di Santo
+
+---
+
+## CSS - clase 2: Responsive design, pseudo selectores
+
+* position
+* Media-queries
+* pseudo clases
+* transform
+* transition
+
+---
+
+## width and height
+
+* le podemos dar una altura y ancho minimo a nuestro elementos en bloque, esto nos permite que no se vean deformados cuando la resolucion cambie. Tambien le podemos dar una altura y ancho maximo
+* si el contenido excede nuestro contenedor podemos usar la propiedad overflow para ocultar o crear un area de scroll. 
+
+---
+
+## position y z-index
+
+* static (default)
+* relative (nos permite usar: top, right, bottom y left y es relativa a su posicion inicial)
+* fixed (toma un lugar especifico en el viewport y nunca se mueve de ahi)
+* sticky (hace que nuestro elemento se quede pegado a )
+* a todos los elementos que tengan un valor de la propiedad position que sea diferente de static se les llaman positioned elements
+* a los elementos que sean posicionados se les puede aplicar la propiedad z-index, esto nos permite ubicar elementos en en diferentes capas y que tapen otros elementos
+
+---
+
+## como se suman el padding mas el width
+
+* cuando tenemos un elemento como un div con un width de 50px y un padding-right de 50px nuestro elemento terminaria con 100px de width, si tiene paddin right y 
+left nuestro elemento terminaria con 150px de width total, lo mismo con la altura
+
+---
+
+## Media-queries
+
+* las media queries nos permiten poner diferentes reglas de css para diferentes pantallas,
+ entonces cuando la resolucion de nuestra pantalla cambie (se agrande o achique) podesmos ir cambiando el layout de nuestra pagina, y las propiedades de los elementos
+
+---
+
+## Media-queries
+
+* la sintaxis para definir una media-querie es: 
+
+* @media only screen and (el ancho en el que nuestra web va a cambiar) { con nuestras reglas dentro }
+
+--- 
+
+## Media-queries
+
+* la sintaxis para definir una media-querie es: 
+
+* @media only screen and (max-width: 600px) { body: { color: black; }}
+
+---
+
+## combinadores
+
+* los combinadores nos dan nuevas formas de seleccionar elementos tags html y aplicarles estilos
+* child selectors: nos permiten acceder a los hijos de nuestros elementos html (div p{ propiedad: valor })
+* Adjacent Sibling Selector: podemos seleccionar todas las p que son hermanos prosimos de un div a elementos hermanos (div + p { propiedad: valor; })
+* General Sibling Selector: podemos seleccionar todas las etiquetas que 
+
+---
+
+## pseudo selectores
+
+* los pseudo selectores nos permiten crear cambios y traniciones en nuestros estilos cuando los atamos a ciertos eventos, como un :hover o :active 
+
+--- 
+
+ ## transitions
+
+ * las transiciones nos permiten transicionar de una manera mas suave de una propiedad a la otra
